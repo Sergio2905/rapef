@@ -548,7 +548,7 @@ body.lock {
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 480px) {
   .main__list {
     grid-template-columns: 1fr;
   }
