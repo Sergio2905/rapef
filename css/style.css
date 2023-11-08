@@ -257,7 +257,7 @@ body.lock {
 
 .main {
   position: relative;
-  background: url("../../img/main/bg.svg") 0 70px/100% auto no-repeat;
+  background: url("../img/main/bg.svg") 0 70px/100% auto no-repeat;
 }
 
 .main::before {
