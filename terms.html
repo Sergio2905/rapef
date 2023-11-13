@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>RAPEF</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css?_v=20231113143214">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <header class="header">
+    <div class="header__container container">
+        <div class="header__body">
+            <a href="#" class="header__logo logo">
+                <span>RAPEF</span>
+                <img src="img/logo.svg" alt="Logo">
+            </a>
+            <div class="header__user user">
+                <button type="button" class="user__btn">
+                    <svg>
+                        <use href="img/icons/icons.svg#user"></use>
+                    </svg>
+                </button>
+                <div class="user__body">
+                    <a href="mailto:saruch123@gmail.com" class="user__email">saruch123@gmail.com</a>
+                    <nav class="user__menu">
+                        <a href="#" class="user__link">
+                            <svg>
+                                <use href="img/icons/icons.svg#monitors"></use>
+                            </svg>
+                            Monitors
+                        </a>
+                        <a href="#" class="user__link">
+                            <svg>
+                                <use href="img/icons/icons.svg#settings"></use>
+                            </svg>
+                            Account settings
+                        </a>
+                    </nav>
+                    <button class="user__sign-out">Sign out</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+        <div class="page">
+            <div class="page__container container">
+                <h1 class="page__title title-h3">Frequently asked questions</h1>
+                <div class="page__body">
+                    <aside class="page__sidebar sidebar">
+                        <nav class="sidebar__menu">
+                            <a href="#" class="sidebar__link">FAQ</a>
+                            <a href="#" class="sidebar__link active">Terms of use</a>
+                            <a href="#" class="sidebar__link">Cookie policy</a>
+                            <a href="#" class="sidebar__link">Privacy policy</a>
+                        </nav>
+                    </aside>
+                    <div class="page__content">
+                        <article class="page__article article">
+                            <h2 class="article__title">Cookie policy</h2>
+                            <div class="article__text">
+                                <p>
+                                    This Cookie Policy explains how RAPEF. ("Company", "we", "us", and "our") uses
+                                    cookies and similar technologies to recognize you when you visit our websites. It
+                                    explains what these technologies are and why we use them, as well as your rights to
+                                    control our use of them.
+                                </p>
+                                <p>
+                                    In some cases we may use cookies to collect personal information, or that becomes
+                                    personal information if we combine it with other information.
+                                </p>
+                            </div>
+                            <h2 class="article__title">What are cookies?</h2>
+                            <div class="article__text">
+                                <p>
+                                    Cookies are small data files that are placed on your computer or mobile device when
+                                    you visit a website. Cookies are widely used by website owners in order to make
+                                    their websites work, or to work more efficiently, as well as to provide reporting
+                                    information.
+                                </p>
+                            </div>
+                            <h2 class="article__title">How can I control cookies?</h2>
+                            <div class="article__text">
+                                <p>
+                                    You have the right to decide whether to accept or reject cookies. You can exercise
+                                    your cookie rights by setting your preferences in the Cookie Consent Manager. The
+                                    Cookie Consent Manager allows you to select which categories of cookies you accept
+                                    or reject. Essential cookies cannot be rejected as they are strictly necessary to
+                                    provide you with services.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button type="button" class="up">
+            <svg>
+                <use href="img/icons/icons.svg#arrow"></use>
+            </svg>
+        </button>
+
+        <footer class="footer">
+    <div class="footer__container container">
+        <div class="footer__body">
+            <div class="footer__main">
+                <a href="#" class="footer__logo logo">
+                    <img src="img/logo.svg" alt="Logo">
+                    <span>RAPEF</span>
+                </a>
+                <div class="footer__links">
+                    <a href="#" class="footer__link">About</a>
+                    <a href="#" class="footer__link">Contact us</a>
+                </div>
+            </div>
+            <div class="footer__rights">© 2023, RAPEF.INFO</div>
+        </div>
+    </div>
+</footer>
+    </div>
+
+    <div class="popup" id="sign">
+    <div class="popup__wrapper">
+        <button type="button" class="popup__close">
+            <svg>
+                <use href="img/icons/icons.svg#close"></use>
+            </svg>
+        </button>
+        <div class="popup__content">
+            <div class="popup__image">
+                <picture><source srcset="img/popup/bg.webp" type="image/webp"><img src="img/popup/bg.png" alt="Background"></picture>
+            </div>
+            <form class="popup__form">
+                <h2 class="popup__title title-h3">Sign in to your account</h2>
+                <div class="popup__input input">
+                    <span class="input__label">Email</span>
+                    <input type="text" placeholder="Email">
+                </div>
+                <div class="popup__input pass">
+                    <span class="pass__label">Password</span>
+                    <a href="#" class="pass__forgot popup-link" data-modal="forgot">Forgot password?</a>
+                    <input type="password" placeholder="password">
+                    <button type="button" class="pass__switcher">
+                        <svg>
+                            <use href="img/icons/icons.svg#eye"></use>
+                        </svg>
+                        <svg>
+                            <use href="img/icons/icons.svg#eye2"></use>
+                        </svg>
+                    </button>
+                </div>
+                <button type="submit" class="popup__submit btn_green">Sign in</button>
+                <div class="popup__footer">
+                    Not registered?
+                    <a href="#" class="popup__link">Join us</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+    <script src="js/app.min.js?_v=20231113143214"></script>
+</body>
+
+</html>
