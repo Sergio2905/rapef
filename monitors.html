@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>RAPEF</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css?_v=20231114135843">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <header class="header">
+    <div class="header__container container">
+        <div class="header__body">
+            <a href="#" class="header__logo logo">
+                <span>RAPEF</span>
+                <img src="img/logo.svg" alt="Logo">
+            </a>
+            <div class="header__links">
+                <a href="#" class="header__link popup-link" data-modal="join">Join us</a>
+                <a href="#" class="header__link popup-link" data-modal="sign">Sign in</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+        <div class="dashboard">
+            <div class="dashboard__container container">
+                <div class="dashboard__body">
+                    <div class="dashboard__header">
+                        <h1 class="dashboard__title title-h3"><span>Monitors</span></h1>
+                        <a href="#" class="dashboard__new">
+                            <svg>
+                                <use href="img/icons/icons.svg#add"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="dashboard__info">
+                        All <span>4 monitors</span> are running smoothly
+                    </div>
+                    <div class="dashboard__tabs tabs">
+                        <div class="tabs__header">
+                            <div class="tabs__item _active">
+                                Dashboard
+                            </div>
+                            <div class="tabs__item">
+                                Recent alerts
+                            </div>
+                        </div>
+                        <div class="tabs__body">
+                            <div class="tabs__block _active">
+                                <div class="tabs__content dashboard__content">
+                                    <div class="dashboard__monitor monitor">
+                                        <div class="monitor__body">
+                                            <div class="monitor__header">
+                                                <div class="monitor__name">
+                                                    Monitor
+                                                    <span>11whois.site</span>
+                                                </div>
+                                                <div class="monitor__state">
+                                                    State
+                                                    <span>1 day</span>
+                                                </div>
+                                                <div class="monitor__uptime">
+                                                    Uptime
+                                                    <span>95,95%</span>
+                                                </div>
+                                                <div class="monitor__notifications">
+                                                    Notifications
+                                                    <div class="monitor__links">
+                                                        <a href="#" class="monitor__link">
+                                                            <svg class="fill">
+                                                                <use href="img/icons/icons.svg#mail"></use>
+                                                            </svg>
+                                                        </a>
+                                                        <a href="#" class="monitor__link">
+                                                            <svg>
+                                                                <use href="img/icons/icons.svg#telegram"></use>
+                                                            </svg>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="monitor__btns">
+                                                    <button type="button" class="monitor__btn">
+                                                        <svg>
+                                                            <use href="img/icons/icons.svg#graph"></use>
+                                                        </svg>
+                                                    </button>
+                                                    <button type="button" class="monitor__btn">
+                                                        <svg class="fill">
+                                                            <use href="img/icons/icons.svg#pause"></use>
+                                                        </svg>
+                                                    </button>
+                                                    <button type="button" class="monitor__btn">
+                                                        <svg>
+                                                            <use href="img/icons/icons.svg#edit"></use>
+                                                        </svg>
+                                                    </button>
+                                                    <button type="button" class="monitor__btn">
+                                                        <svg>
+                                                            <use href="img/icons/icons.svg#delete"></use>
+                                                        </svg>
+                                                    </button>
+                                                    <button type="button" class="monitor__btn">
+                                                        <svg>
+                                                            <use href="img/icons/icons.svg#refresh"></use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="monitor__operational operational">
+                                                <p class="operational__title">Operational</p>
+                                                <p class="operational__text">Your service is <b>up for 10 hours</b>.</p>
+                                            </div>
+                                            <div class="monitor__graphs graphs"></div>
+                                            <div class="monitor__widgets widgets">
+                                                <button type="button" class="widgets__add">
+                                                    Add widgets
+                                                    <span>
+                                                        <svg>
+                                                            <use href="img/icons/icons.svg#arrow1"></use>
+                                                        </svg>
+                                                    </span>
+                                                </button>
+                                                <div class="widgets__body">
+                                                    <div class="widgets__left">
+                                                        <p class="widgets__title">Select button design:</p>
+                                                        <div class="widgets__items">
+                                                            <button type="button"
+                                                                class="widgets__item widget widget_option-1">
+                                                                <span class="widget__uptime">Uptime</span>
+                                                                <span class="widget__value">99,34%</span>
+                                                            </button>
+                                                            <button type="button"
+                                                                class="widgets__item widget widget_option-10">
+                                                                <span class="widget__uptime">Uptime</span>
+                                                                <span class="widget__logo">RAPEF</span>
+                                                                <span class="widget__value">99,34%</span>
+                                                            </button>
+                                                            <button type="button"
+                                                                class="widgets__item widget widget_option-19">
+                                                                <span class="widget__logo">
+                                                                    <span>RAPEF</span>
+                                                                    <img src="img/logo.svg" alt="Logo">
+                                                                </span>
+                                                                <span class="widget__uptime">Uptime</span>
+                                                                <span class="widget__indicator">
+                                                                    <img src="img/icons/indicator.svg" alt="Indicator">
+                                                                </span>
+                                                                <span class="widget__value">99,34%</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="widgets__right">
+                                                        <p class="widgets__title">Button code with selected color:</p>
+                                                        <div class="widgets__code">
+                                                            <textarea name="code">widget code</textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabs__block">
+                                <div class="tabs__content">
+                                    2
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button type="button" class="up">
+            <svg>
+                <use href="img/icons/icons.svg#arrow"></use>
+            </svg>
+        </button>
+
+        <footer class="footer">
+    <div class="footer__container container">
+        <div class="footer__body">
+            <div class="footer__main">
+                <a href="#" class="footer__logo logo">
+                    <img src="img/logo.svg" alt="Logo">
+                    <span>RAPEF</span>
+                </a>
+                <div class="footer__links">
+                    <a href="#" class="footer__link">About</a>
+                    <a href="#" class="footer__link">Contact us</a>
+                </div>
+            </div>
+            <div class="footer__rights">© 2023, RAPEF.INFO</div>
+        </div>
+    </div>
+</footer>
+    </div>
+
+    <div class="popup" id="sign">
+    <div class="popup__wrapper">
+        <button type="button" class="popup__close">
+            <svg>
+                <use href="img/icons/icons.svg#close"></use>
+            </svg>
+        </button>
+        <div class="popup__content">
+            <div class="popup__image">
+                <picture><source srcset="img/popup/bg.webp" type="image/webp"><img src="img/popup/bg.png" alt="Background"></picture>
+            </div>
+            <form class="popup__form">
+                <h2 class="popup__title title-h3">Sign in to your account</h2>
+                <div class="popup__input input">
+                    <span class="input__label">Email</span>
+                    <input type="text" placeholder="Email">
+                </div>
+                <div class="popup__input pass">
+                    <span class="pass__label">Password</span>
+                    <a href="#" class="pass__forgot popup-link" data-modal="forgot">Forgot password?</a>
+                    <input type="password" placeholder="password">
+                    <button type="button" class="pass__switcher">
+                        <svg>
+                            <use href="img/icons/icons.svg#eye"></use>
+                        </svg>
+                        <svg>
+                            <use href="img/icons/icons.svg#eye2"></use>
+                        </svg>
+                    </button>
+                </div>
+                <button type="submit" class="popup__submit btn_green">Sign in</button>
+                <div class="popup__footer">
+                    Not registered?
+                    <a href="#" class="popup__link">Join us</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+    <script src="js/app.min.js?_v=20231114135843"></script>
+</body>
+
+</html>
