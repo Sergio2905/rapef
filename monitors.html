@@ -5,7 +5,7 @@
     <title>RAPEF</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.min.css?_v=20231114135843">
+    <link rel="stylesheet" href="css/style.min.css?_v=20231115132217">
 </head>
 
 <body>
@@ -47,6 +47,46 @@
                             </div>
                             <div class="tabs__item">
                                 Recent alerts
+                            </div>
+                            <div class="tabs__options">
+                                <div class="tabs__select select-box">
+                                    <div class="options-container">
+                                        <div class="option">
+                                            <input type="radio" id="all" name="name" value="All">
+                                            <label for="all">All</label>
+                                        </div>
+                                        <div class="option">
+                                            <input type="radio" id="Option1" name="name" value="Op1">
+                                            <label for="option1">option 2</label>
+                                        </div>
+                                        <div class="option">
+                                            <input type="radio" id="option2" name="name" value="Op2">
+                                            <label for="option2">Option 3</label>
+                                        </div>
+                                    </div>
+                                    <div class="selected">
+                                        All
+                                    </div>
+                                </div>
+                                <div class="tabs__select select-box">
+                                    <div class="options-container">
+                                        <div class="option">
+                                            <input type="radio" id="24h" name="time" value="24h">
+                                            <label for="24h">Last 24 hours</label>
+                                        </div>
+                                        <div class="option">
+                                            <input type="radio" id="7h" name="time" value="7h">
+                                            <label for="7h">Last 7 hours</label>
+                                        </div>
+                                        <div class="option">
+                                            <input type="radio" id="30d" name="time" value="30d">
+                                            <label for="30d">Last 30 days</label>
+                                        </div>
+                                    </div>
+                                    <div class="selected">
+                                        24h
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="tabs__body">
@@ -110,53 +150,868 @@
                                                     </button>
                                                 </div>
                                             </div>
-                                            <div class="monitor__operational operational">
-                                                <p class="operational__title">Operational</p>
-                                                <p class="operational__text">Your service is <b>up for 10 hours</b>.</p>
-                                            </div>
-                                            <div class="monitor__graphs graphs"></div>
-                                            <div class="monitor__widgets widgets">
-                                                <button type="button" class="widgets__add">
-                                                    Add widgets
-                                                    <span>
-                                                        <svg>
-                                                            <use href="img/icons/icons.svg#arrow1"></use>
-                                                        </svg>
-                                                    </span>
-                                                </button>
-                                                <div class="widgets__body">
-                                                    <div class="widgets__left">
-                                                        <p class="widgets__title">Select button design:</p>
-                                                        <div class="widgets__items">
-                                                            <button type="button"
-                                                                class="widgets__item widget widget_option-1">
-                                                                <span class="widget__uptime">Uptime</span>
-                                                                <span class="widget__value">99,34%</span>
-                                                            </button>
-                                                            <button type="button"
-                                                                class="widgets__item widget widget_option-10">
-                                                                <span class="widget__uptime">Uptime</span>
-                                                                <span class="widget__logo">RAPEF</span>
-                                                                <span class="widget__value">99,34%</span>
-                                                            </button>
-                                                            <button type="button"
-                                                                class="widgets__item widget widget_option-19">
-                                                                <span class="widget__logo">
-                                                                    <span>RAPEF</span>
-                                                                    <img src="img/logo.svg" alt="Logo">
-                                                                </span>
-                                                                <span class="widget__uptime">Uptime</span>
-                                                                <span class="widget__indicator">
-                                                                    <img src="img/icons/indicator.svg" alt="Indicator">
-                                                                </span>
-                                                                <span class="widget__value">99,34%</span>
-                                                            </button>
+                                            <div class="monitor__wrapper">
+                                                <div class="monitor__operational operational">
+                                                    <p class="operational__title">Operational</p>
+                                                    <p class="operational__text">Your service is <b>up for 10 hours</b>.
+                                                    </p>
+                                                </div>
+                                                <div class="monitor__graphs graphs">
+                                                    <div class="graphs__card">
+                                                        <div class="graphs__header">
+                                                            <div class="graphs__value">
+                                                                <svg>
+                                                                    <use href="img/icons/icons.svg#arrow2"></use>
+                                                                </svg>
+                                                                96,971 %
+                                                            </div>
+                                                            <div class="graphs__info">7d average</div>
+                                                        </div>
+                                                        <div class="graphs__diagram diagram">
+                                                            <div class="diagram__body">
+                                                                <span class="diagram__item diagram__item_green"></span>
+                                                                <span class="diagram__item diagram__item_red"></span>
+                                                                <span class="diagram__item diagram__item_red"></span>
+                                                                <span class="diagram__item diagram__item_green"></span>
+                                                                <span class="diagram__item diagram__item_green"></span>
+                                                                <span class="diagram__item diagram__item_green"></span>
+                                                                <span class="diagram__item diagram__item_green"></span>
+                                                                <span class="diagram__item diagram__item_green"></span>
+                                                                <span class="diagram__item diagram__item_green"></span>
+                                                                <span class="diagram__item diagram__item_green"></span>
+                                                                <span class="diagram__item diagram__item_green"></span>
+                                                                <span class="diagram__item diagram__item_green"></span>
+                                                                <span class="diagram__item diagram__item_red"></span>
+                                                                <span class="diagram__item diagram__item_green"></span>
+                                                                <span class="diagram__item diagram__item_green"></span>
+                                                                <span class="diagram__item diagram__item_green"></span>
+                                                                <span class="diagram__item diagram__item_green"></span>
+                                                                <span class="diagram__item diagram__item_green"></span>
+                                                                <span class="diagram__item diagram__item_green"></span>
+                                                                <span class="diagram__item diagram__item_red"></span>
+                                                                <span class="diagram__item diagram__item_red"></span>
+                                                                <span class="diagram__item diagram__item_red"></span>
+                                                                <span class="diagram__item diagram__item_green"></span>
+                                                                <span class="diagram__item diagram__item_green"></span>
+                                                                <span class="diagram__item diagram__item_green"></span>
+                                                                <span class="diagram__item diagram__item_green"></span>
+                                                                <span class="diagram__item diagram__item_green"></span>
+                                                                <span class="diagram__item diagram__item_green"></span>
+                                                                <span class="diagram__item diagram__item_red"></span>
+                                                                <span class="diagram__item diagram__item_red"></span>
+                                                                <span class="diagram__item diagram__item_green"></span>
+                                                                <span class="diagram__item diagram__item_green"></span>
+                                                                <span class="diagram__item diagram__item_red"></span>
+                                                                <span class="diagram__item diagram__item_red"></span>
+                                                                <span class="diagram__item diagram__item_red"></span>
+                                                                <span class="diagram__item diagram__item_green"></span>
+                                                                <span class="diagram__item diagram__item_green"></span>
+                                                                <span class="diagram__item diagram__item_green"></span>
+                                                            </div>
+                                                            <div class="diagram__values">
+                                                                <div class="diagram__value">Sep 10</div>
+                                                                <div class="diagram__value">Sep 12</div>
+                                                                <div class="diagram__value">Sep 14</div>
+                                                                <div class="diagram__value">Sep 15</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="graphs__footer">
+                                                            Total downtime in 7 days is <span>5 hours</span>. <br>
+                                                            There have been 16 outages detected.
                                                         </div>
                                                     </div>
-                                                    <div class="widgets__right">
-                                                        <p class="widgets__title">Button code with selected color:</p>
-                                                        <div class="widgets__code">
-                                                            <textarea name="code">widget code</textarea>
+                                                    <div class="graphs__card">
+                                                        <div class="graphs__header">
+                                                            <div class="graphs__value">
+                                                                <svg>
+                                                                    <use href="img/icons/icons.svg#arrow2"></use>
+                                                                </svg>
+                                                                995,271 ms
+                                                            </div>
+                                                            <div class="graphs__info">24 hours average</div>
+                                                        </div>
+                                                        <div class="graphs__chart" id="chart1"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="monitor__widgets widgets">
+                                                    <button type="button" class="widgets__add">
+                                                        Add widgets
+                                                        <span>
+                                                            <svg>
+                                                                <use href="img/icons/icons.svg#arrow1"></use>
+                                                            </svg>
+                                                        </span>
+                                                    </button>
+                                                    <div class="widgets__body">
+                                                        <div class="widgets__left" data-desk="form, append">
+                                                            <p class="widgets__title">Select button design:</p>
+                                                            <div class="widgets__items">
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-1">
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-2">
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-3">
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-4">
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-5">
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-6">
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-7">
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-8">
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-9">
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-10">
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__logo">RAPEF</span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-11">
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__logo">RAPEF</span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-12">
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__logo">RAPEF</span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-13">
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__logo">RAPEF</span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-14">
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__logo">RAPEF</span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-15">
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__logo">RAPEF</span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-16">
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-17">
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-18">
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-19">
+                                                                    <span class="widget__logo">
+                                                                        <span>RAPEF</span>
+                                                                        <img src="img/logo.svg" alt="Logo">
+                                                                    </span>
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__indicator">
+                                                                        <img src="img/icons/indicator.svg"
+                                                                            alt="Indicator">
+                                                                    </span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-20">
+                                                                    <span class="widget__logo">
+                                                                        <span>RAPEF</span>
+                                                                        <img src="img/logo.svg" alt="Logo">
+                                                                    </span>
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__indicator">
+                                                                        <img src="img/icons/indicator.svg"
+                                                                            alt="Indicator">
+                                                                    </span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-21">
+                                                                    <span class="widget__logo">
+                                                                        <span>RAPEF</span>
+                                                                        <img src="img/logo.svg" alt="Logo">
+                                                                    </span>
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__indicator">
+                                                                        <img src="img/icons/indicator.svg"
+                                                                            alt="Indicator">
+                                                                    </span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-22">
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                    <span class="widget__indicator">
+                                                                        <img src="img/icons/indicator-small.svg"
+                                                                            alt="Indicator">
+                                                                    </span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-23">
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                    <span class="widget__indicator">
+                                                                        <img src="img/icons/indicator-white.svg"
+                                                                            alt="Indicator">
+                                                                    </span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-24">
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                    <span class="widget__indicator">
+                                                                        <img src="img/icons/indicator-small.svg"
+                                                                            alt="Indicator">
+                                                                    </span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-25">
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                    <span class="widget__indicator">
+                                                                        <img src="img/icons/indicator-small.svg"
+                                                                            alt="Indicator">
+                                                                    </span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-26">
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                    <span class="widget__indicator">
+                                                                        <img src="img/icons/indicator-small.svg"
+                                                                            alt="Indicator">
+                                                                    </span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-27">
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                    <span class="widget__indicator">
+                                                                        <img src="img/icons/indicator-small.svg"
+                                                                            alt="Indicator">
+                                                                    </span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-28">
+                                                                    <span class="widget__logo"></span>
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-29">
+                                                                    <span class="widget__logo"></span>
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-30">
+                                                                    <span class="widget__logo"></span>
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-31">
+                                                                    <span class="widget__logo"></span>
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-32">
+                                                                    <span class="widget__logo"></span>
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-33">
+                                                                    <span class="widget__logo"></span>
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-34">
+                                                                    <div class="widget__left">
+                                                                        <span class="widget__text">We have excellent
+                                                                            access</span>
+                                                                        <span class="widget__domain">rapef.info</span>
+                                                                    </div>
+                                                                    <div class="widget__right">
+                                                                        <span class="widget__uptime">Uptime</span>
+                                                                        <span class="widget__value">99,34</span>
+                                                                    </div>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-35">
+                                                                    <div class="widget__left">
+                                                                        <span class="widget__text">We have excellent
+                                                                            access</span>
+                                                                        <span class="widget__domain">rapef.info</span>
+                                                                    </div>
+                                                                    <div class="widget__right">
+                                                                        <span class="widget__uptime">Uptime</span>
+                                                                        <span class="widget__value">99,34</span>
+                                                                    </div>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_empty">
+                                                                    <span>Pixel (Invisible)</span>
+                                                                </button>
+                                                            </div>
+                                                            <form action="#" class="widgets__form form"
+                                                                data-move="form, 768">
+                                                                <p class="form__title">Enter your feedback details:</p>
+                                                                <p class="form__desc">We will contact you using contacts
+                                                                    if
+                                                                    the site becomes unavailable</p>
+                                                                <div class="form__input input">
+                                                                    <div class="input__label">Telegram</div>
+                                                                    <input type="text" placeholder="@example">
+                                                                </div>
+                                                                <div class="form__input input">
+                                                                    <div class="input__label">Mail</div>
+                                                                    <input type="text" placeholder="Mail">
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                        <div class="widgets__right" data-mob="form, append">
+                                                            <p class="widgets__title">Button code with selected color:
+                                                            </p>
+                                                            <div class="widgets__code">
+                                                                <textarea name="code">widget code</textarea>
+                                                            </div>
+                                                            <div class="widgets__info">
+                                                                <div class="widgets__dot"></div>
+                                                                <div class="widgets__text">
+                                                                    To start checking the
+                                                                    accessibility of your site, place the widget at:
+                                                                </div>
+                                                                <a href="#" class="widgets__link">www.rapef.info</a>
+                                                            </div>
+                                                            <div class="widgets__outro">
+                                                                <div class="widgets__help help">
+                                                                    <button type="button" class="help__btn">
+                                                                        <svg>
+                                                                            <use href="img/icons/icons.svg#info"></use>
+                                                                        </svg>
+                                                                    </button>
+                                                                    <div class="help__body">
+                                                                        <button type="button" class="help__close">
+                                                                            <svg>
+                                                                                <use href="img/icons/icons.svg#close">
+                                                                                </use>
+                                                                            </svg>
+                                                                        </button>
+                                                                        <p>Some text here...</p>
+                                                                    </div>
+                                                                </div>
+                                                                The verification of your site will begin in a few hours.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dashboard__monitor monitor active">
+                                        <div class="monitor__body">
+                                            <div class="monitor__header">
+                                                <div class="monitor__name">
+                                                    Monitor
+                                                    <span>11whois.site</span>
+                                                </div>
+                                                <div class="monitor__state">
+                                                    State
+                                                    <span>1 day</span>
+                                                </div>
+                                                <div class="monitor__uptime">
+                                                    Uptime
+                                                    <span>95,95%</span>
+                                                </div>
+                                                <div class="monitor__notifications">
+                                                    Notifications
+                                                    <div class="monitor__links">
+                                                        <a href="#" class="monitor__link">
+                                                            <svg class="fill">
+                                                                <use href="img/icons/icons.svg#mail"></use>
+                                                            </svg>
+                                                        </a>
+                                                        <a href="#" class="monitor__link">
+                                                            <svg>
+                                                                <use href="img/icons/icons.svg#telegram"></use>
+                                                            </svg>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="monitor__btns">
+                                                    <button type="button" class="monitor__btn">
+                                                        <svg>
+                                                            <use href="img/icons/icons.svg#graph"></use>
+                                                        </svg>
+                                                    </button>
+                                                    <button type="button" class="monitor__btn">
+                                                        <svg class="fill">
+                                                            <use href="img/icons/icons.svg#pause"></use>
+                                                        </svg>
+                                                    </button>
+                                                    <button type="button" class="monitor__btn">
+                                                        <svg>
+                                                            <use href="img/icons/icons.svg#edit"></use>
+                                                        </svg>
+                                                    </button>
+                                                    <button type="button" class="monitor__btn">
+                                                        <svg>
+                                                            <use href="img/icons/icons.svg#delete"></use>
+                                                        </svg>
+                                                    </button>
+                                                    <button type="button" class="monitor__btn">
+                                                        <svg>
+                                                            <use href="img/icons/icons.svg#refresh"></use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="monitor__wrapper">
+                                                <div class="monitor__operational operational">
+                                                    <p class="operational__title">Operational</p>
+                                                    <p class="operational__text">Your service is <b>up for 10 hours</b>.
+                                                    </p>
+                                                </div>
+                                                <div class="monitor__graphs graphs">
+                                                    <div class="graphs__card">
+                                                        <div class="graphs__header">
+                                                            <div class="graphs__value">
+                                                                <svg>
+                                                                    <use href="img/icons/icons.svg#arrow2"></use>
+                                                                </svg>
+                                                                96,971 %
+                                                            </div>
+                                                            <div class="graphs__info">7d average</div>
+                                                        </div>
+                                                        <div class="graphs__diagram diagram">
+                                                            <div class="diagram__body">
+                                                                <span class="diagram__item diagram__item_green"></span>
+                                                                <span class="diagram__item diagram__item_red"></span>
+                                                                <span class="diagram__item diagram__item_red"></span>
+                                                                <span class="diagram__item diagram__item_green"></span>
+                                                                <span class="diagram__item diagram__item_green"></span>
+                                                                <span class="diagram__item diagram__item_green"></span>
+                                                                <span class="diagram__item diagram__item_green"></span>
+                                                                <span class="diagram__item diagram__item_green"></span>
+                                                                <span class="diagram__item diagram__item_green"></span>
+                                                                <span class="diagram__item diagram__item_green"></span>
+                                                                <span class="diagram__item diagram__item_green"></span>
+                                                                <span class="diagram__item diagram__item_green"></span>
+                                                                <span class="diagram__item diagram__item_red"></span>
+                                                                <span class="diagram__item diagram__item_green"></span>
+                                                                <span class="diagram__item diagram__item_green"></span>
+                                                                <span class="diagram__item diagram__item_green"></span>
+                                                                <span class="diagram__item diagram__item_green"></span>
+                                                                <span class="diagram__item diagram__item_green"></span>
+                                                                <span class="diagram__item diagram__item_green"></span>
+                                                                <span class="diagram__item diagram__item_red"></span>
+                                                                <span class="diagram__item diagram__item_red"></span>
+                                                                <span class="diagram__item diagram__item_red"></span>
+                                                                <span class="diagram__item diagram__item_green"></span>
+                                                                <span class="diagram__item diagram__item_green"></span>
+                                                                <span class="diagram__item diagram__item_green"></span>
+                                                                <span class="diagram__item diagram__item_green"></span>
+                                                                <span class="diagram__item diagram__item_green"></span>
+                                                                <span class="diagram__item diagram__item_green"></span>
+                                                                <span class="diagram__item diagram__item_red"></span>
+                                                                <span class="diagram__item diagram__item_red"></span>
+                                                                <span class="diagram__item diagram__item_green"></span>
+                                                                <span class="diagram__item diagram__item_green"></span>
+                                                                <span class="diagram__item diagram__item_red"></span>
+                                                                <span class="diagram__item diagram__item_red"></span>
+                                                                <span class="diagram__item diagram__item_red"></span>
+                                                                <span class="diagram__item diagram__item_green"></span>
+                                                                <span class="diagram__item diagram__item_green"></span>
+                                                                <span class="diagram__item diagram__item_green"></span>
+                                                            </div>
+                                                            <div class="diagram__values">
+                                                                <div class="diagram__value">Sep 10</div>
+                                                                <div class="diagram__value">Sep 12</div>
+                                                                <div class="diagram__value">Sep 14</div>
+                                                                <div class="diagram__value">Sep 15</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="graphs__footer">
+                                                            Total downtime in 7 days is <span>5 hours</span>. <br>
+                                                            There have been 16 outages detected.
+                                                        </div>
+                                                    </div>
+                                                    <div class="graphs__card">
+                                                        <div class="graphs__header">
+                                                            <div class="graphs__value">
+                                                                <svg>
+                                                                    <use href="img/icons/icons.svg#arrow2"></use>
+                                                                </svg>
+                                                                995,271 ms
+                                                            </div>
+                                                            <div class="graphs__info">24 hours average</div>
+                                                        </div>
+                                                        <div class="graphs__chart" id="chart2"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="monitor__widgets widgets">
+                                                    <button type="button" class="widgets__add">
+                                                        Add widgets
+                                                        <span>
+                                                            <svg>
+                                                                <use href="img/icons/icons.svg#arrow1"></use>
+                                                            </svg>
+                                                        </span>
+                                                    </button>
+                                                    <div class="widgets__body">
+                                                        <div class="widgets__left" data-desk="form, append">
+                                                            <p class="widgets__title">Select button design:</p>
+                                                            <div class="widgets__items">
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-1">
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-2">
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-3">
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-4">
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-5">
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-6">
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-7">
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-8">
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-9">
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-10">
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__logo">RAPEF</span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-11">
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__logo">RAPEF</span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-12">
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__logo">RAPEF</span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-13">
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__logo">RAPEF</span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-14">
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__logo">RAPEF</span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-15">
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__logo">RAPEF</span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-16">
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-17">
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-18">
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-19">
+                                                                    <span class="widget__logo">
+                                                                        <span>RAPEF</span>
+                                                                        <img src="img/logo.svg" alt="Logo">
+                                                                    </span>
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__indicator">
+                                                                        <img src="img/icons/indicator.svg"
+                                                                            alt="Indicator">
+                                                                    </span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-20">
+                                                                    <span class="widget__logo">
+                                                                        <span>RAPEF</span>
+                                                                        <img src="img/logo.svg" alt="Logo">
+                                                                    </span>
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__indicator">
+                                                                        <img src="img/icons/indicator.svg"
+                                                                            alt="Indicator">
+                                                                    </span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-21">
+                                                                    <span class="widget__logo">
+                                                                        <span>RAPEF</span>
+                                                                        <img src="img/logo.svg" alt="Logo">
+                                                                    </span>
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__indicator">
+                                                                        <img src="img/icons/indicator.svg"
+                                                                            alt="Indicator">
+                                                                    </span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-22">
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                    <span class="widget__indicator">
+                                                                        <img src="img/icons/indicator-small.svg"
+                                                                            alt="Indicator">
+                                                                    </span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-23">
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                    <span class="widget__indicator">
+                                                                        <img src="img/icons/indicator-white.svg"
+                                                                            alt="Indicator">
+                                                                    </span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-24">
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                    <span class="widget__indicator">
+                                                                        <img src="img/icons/indicator-small.svg"
+                                                                            alt="Indicator">
+                                                                    </span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-25">
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                    <span class="widget__indicator">
+                                                                        <img src="img/icons/indicator-small.svg"
+                                                                            alt="Indicator">
+                                                                    </span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-26">
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                    <span class="widget__indicator">
+                                                                        <img src="img/icons/indicator-small.svg"
+                                                                            alt="Indicator">
+                                                                    </span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-27">
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                    <span class="widget__indicator">
+                                                                        <img src="img/icons/indicator-small.svg"
+                                                                            alt="Indicator">
+                                                                    </span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-28">
+                                                                    <span class="widget__logo"></span>
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-29">
+                                                                    <span class="widget__logo"></span>
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-30">
+                                                                    <span class="widget__logo"></span>
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-31">
+                                                                    <span class="widget__logo"></span>
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-32">
+                                                                    <span class="widget__logo"></span>
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-33">
+                                                                    <span class="widget__logo"></span>
+                                                                    <span class="widget__uptime">Uptime</span>
+                                                                    <span class="widget__value">99,34%</span>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-34">
+                                                                    <div class="widget__left">
+                                                                        <span class="widget__text">We have excellent
+                                                                            access</span>
+                                                                        <span class="widget__domain">rapef.info</span>
+                                                                    </div>
+                                                                    <div class="widget__right">
+                                                                        <span class="widget__uptime">Uptime</span>
+                                                                        <span class="widget__value">99,34</span>
+                                                                    </div>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_option-35">
+                                                                    <div class="widget__left">
+                                                                        <span class="widget__text">We have excellent
+                                                                            access</span>
+                                                                        <span class="widget__domain">rapef.info</span>
+                                                                    </div>
+                                                                    <div class="widget__right">
+                                                                        <span class="widget__uptime">Uptime</span>
+                                                                        <span class="widget__value">99,34</span>
+                                                                    </div>
+                                                                </button>
+                                                                <button type="button"
+                                                                    class="widgets__item widget widget_empty">
+                                                                    <span>Pixel (Invisible)</span>
+                                                                </button>
+                                                            </div>
+                                                            <form action="#" class="widgets__form form"
+                                                                data-move="form, 768">
+                                                                <p class="form__title">Enter your feedback details:</p>
+                                                                <p class="form__desc">We will contact you using contacts
+                                                                    if
+                                                                    the site becomes unavailable</p>
+                                                                <div class="form__input input">
+                                                                    <div class="input__label">Telegram</div>
+                                                                    <input type="text" placeholder="@example">
+                                                                </div>
+                                                                <div class="form__input input">
+                                                                    <div class="input__label">Mail</div>
+                                                                    <input type="text" placeholder="Mail">
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                        <div class="widgets__right" data-mob="form, append">
+                                                            <p class="widgets__title">Button code with selected color:
+                                                            </p>
+                                                            <div class="widgets__code">
+                                                                <textarea name="code">widget code</textarea>
+                                                            </div>
+                                                            <div class="widgets__info">
+                                                                <div class="widgets__dot"></div>
+                                                                <div class="widgets__text">
+                                                                    To start checking the
+                                                                    accessibility of your site, place the widget at:
+                                                                </div>
+                                                                <a href="#" class="widgets__link">www.rapef.info</a>
+                                                            </div>
+                                                            <div class="widgets__outro">
+                                                                <div class="widgets__help help">
+                                                                    <button type="button" class="help__btn">
+                                                                        <svg>
+                                                                            <use href="img/icons/icons.svg#info"></use>
+                                                                        </svg>
+                                                                    </button>
+                                                                    <div class="help__body">
+                                                                        <button type="button" class="help__close">
+                                                                            <svg>
+                                                                                <use href="img/icons/icons.svg#close">
+                                                                                </use>
+                                                                            </svg>
+                                                                        </button>
+                                                                        <p>Some text here...</p>
+                                                                    </div>
+                                                                </div>
+                                                                The verification of your site will begin in a few hours.
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -166,8 +1021,61 @@
                                 </div>
                             </div>
                             <div class="tabs__block">
-                                <div class="tabs__content">
-                                    2
+                                <div class="tabs__content dashboard__content">
+                                    <div class="dashboard__alerts alerts">
+                                        <div class="alerts__body">
+                                            <div class="alerts__item alerts__item_up">
+                                                <div class="alerts__main">
+                                                    <div class="alerts__time">53 minutes ago</div>
+                                                    <div class="alerts__domain"><span>11whois.site</span> is up</div>
+                                                </div>
+                                                <div class="alerts__change">
+                                                    19 minutes
+                                                </div>
+                                                <div class="alerts__indicator">
+                                                    <svg>
+                                                        <use href="img/icons/icons.svg#arrow2"></use>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="alerts__item alerts__item_down">
+                                                <div class="alerts__main">
+                                                    <div class="alerts__time">53 minutes ago</div>
+                                                    <div class="alerts__domain"><span>11whois.site</span> is down</div>
+                                                </div>
+                                                <div class="alerts__indicator">
+                                                    <svg>
+                                                        <use href="img/icons/icons.svg#arrow2"></use>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="alerts__item alerts__item_up">
+                                                <div class="alerts__main">
+                                                    <div class="alerts__time">53 minutes ago</div>
+                                                    <div class="alerts__domain"><span>11whois.site</span> is up</div>
+                                                </div>
+                                                <div class="alerts__change">
+                                                    19 minutes
+                                                </div>
+                                                <div class="alerts__indicator">
+                                                    <svg>
+                                                        <use href="img/icons/icons.svg#arrow2"></use>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="alerts__item alerts__item_down">
+                                                <div class="alerts__main">
+                                                    <div class="alerts__time">53 minutes ago</div>
+                                                    <div class="alerts__domain"><span>11whois.site</span> is down</div>
+                                                </div>
+                                                <div class="alerts__indicator">
+                                                    <svg>
+                                                        <use href="img/icons/icons.svg#arrow2"></use>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -241,7 +1149,7 @@
     </div>
 </div>
 
-    <script src="js/app.min.js?_v=20231114135843"></script>
+    <script src="js/app.min.js?_v=20231115132217"></script>
 </body>
 
 </html>
