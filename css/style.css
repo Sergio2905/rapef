@@ -1396,12 +1396,15 @@ body.lock {
 }
 
 .widgets__body {
-  display: flex;
-  align-items: flex-start;
-  gap: 50px;
   border-radius: 12px;
   background: #F5F5F5;
   padding: 40px;
+}
+
+.widgets__content {
+  display: flex;
+  align-items: flex-start;
+  gap: 50px;
 }
 
 .widgets__left {
@@ -1425,6 +1428,11 @@ body.lock {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 12px;
+}
+
+.widgets__form {
+  max-width: 440px;
+  width: 100%;
 }
 
 .widgets__form .form__title {
@@ -3421,6 +3429,9 @@ body.lock {
 
   .widgets__body {
     padding: calc(16px + 24 * (100vw - 320px) / 1600);
+  }
+
+  .widgets__content {
     gap: calc(20px + 30 * (100vw - 320px) / 1600);
   }
 
@@ -3748,6 +3759,11 @@ body.lock {
     max-width: 290px;
   }
 
+  .widgets__form {
+    min-width: 290px;
+    max-width: 290px;
+  }
+
   .main__list {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -3796,16 +3812,13 @@ body.lock {
     flex-direction: column;
   }
 
-  .widgets__body {
+  .widgets__content {
     flex-direction: column;
+    margin-bottom: 32px;
   }
 
   .widgets__left {
     max-width: unset;
-  }
-
-  .widgets__outro {
-    margin-bottom: 24px;
   }
 
   .main__list {
