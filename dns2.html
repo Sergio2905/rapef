@@ -5,7 +5,7 @@
     <title>RAPEF</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.min.css?_v=20231115133005">
+    <link rel="stylesheet" href="css/style.min.css?_v=20231116131046">
 </head>
 
 <body>
@@ -18,6 +18,21 @@
                 <span>RAPEF</span>
                 <img src="img/logo.svg" alt="Logo">
             </a>
+            <div class="header__search search-header">
+                <button class="search-header__btn">
+                    <svg>
+                        <use href="img/icons/icons.svg#search"></use>
+                    </svg>
+                </button>
+                <form action="#" class="search-header__form">
+                    <input type="text" placeholder="Type anything to search...">
+                    <button class="search-header__close">
+                        <svg>
+                            <use href="img/icons/icons.svg#close"></use>
+                        </svg>
+                    </button>
+                </form>
+            </div>
             <div class="header__links">
                 <a href="#" class="header__link popup-link" data-modal="join">Join us</a>
                 <a href="#" class="header__link popup-link" data-modal="sign">Sign in</a>
@@ -120,7 +135,591 @@
                             </div>
                         </div>
                         <div class="tabs__block">
-                            <div class="tabs__content">Under construction...</div>
+                            <div class="tabs__content">
+                                <div class="dns__body">
+                                    <div class="dns__header">
+                                        <h2 class="dns__title title-h3">
+                                            Free website accessibility check from different parts
+                                            of the world
+                                        </h2>
+                                        <p class="dns__desc">
+                                            By entering the address or IP of your website
+                                            (a specific page on the website), you can see what the resource being
+                                            checked will look like from our monitoring points.
+                                        </p>
+                                    </div>
+                                    <div class="dns__map">
+                                        <picture><source srcset="img/dns/map.webp" type="image/webp"><img src="img/dns/map.png" alt="Map"></picture>
+                                    </div>
+                                    <div class="dns__check check">
+                                        <div class="check__header">
+                                            The check was performed on October 7, 2023 at 15:06:41 Kyiv time
+                                        </div>
+                                        <div class="check__body">
+                                            <div class="check__bar">
+                                                <div class="check__progress"></div>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="check__btn btn_blue">
+                                            Check again
+                                        </button>
+                                    </div>
+                                    <div class="dns__data data">
+                                        <ul class="data__table">
+                                            <li class="data__row">
+                                                <div class="data__item">
+                                                    Availability point
+                                                    <div class="data__help help">
+                                                        <button type="button" class="help__btn">
+                                                            <svg>
+                                                                <use href="img/icons/icons.svg#info"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <div class="help__body">
+                                                            Some text
+                                                            <button type="button" class="help__close">
+                                                                <svg>
+                                                                    <use href="img/icons/icons.svg#close">
+                                                                    </use>
+                                                                </svg>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="data__item">
+                                                    Your server IP
+                                                    <div class="data__help help">
+                                                        <button type="button" class="help__btn">
+                                                            <svg>
+                                                                <use href="img/icons/icons.svg#info"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <div class="help__body">
+                                                            Some text
+                                                            <button type="button" class="help__close">
+                                                                <svg>
+                                                                    <use href="img/icons/icons.svg#close">
+                                                                    </use>
+                                                                </svg>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="data__item">
+                                                    Total time, sec.
+                                                    <div class="data__help help">
+                                                        <button type="button" class="help__btn">
+                                                            <svg>
+                                                                <use href="img/icons/icons.svg#info"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <div class="help__body">
+                                                            Some text
+                                                            <button type="button" class="help__close">
+                                                                <svg>
+                                                                    <use href="img/icons/icons.svg#close">
+                                                                    </use>
+                                                                </svg>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="data__item">
+                                                    DNS, sec.
+                                                    <div class="data__help help">
+                                                        <button type="button" class="help__btn">
+                                                            <svg>
+                                                                <use href="img/icons/icons.svg#info"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <div class="help__body">
+                                                            Some text
+                                                            <button type="button" class="help__close">
+                                                                <svg>
+                                                                    <use href="img/icons/icons.svg#close">
+                                                                    </use>
+                                                                </svg>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="data__item">
+                                                    Connection, sec.
+                                                    <div class="data__help help">
+                                                        <button type="button" class="help__btn">
+                                                            <svg>
+                                                                <use href="img/icons/icons.svg#info"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <div class="help__body">
+                                                            Some text
+                                                            <button type="button" class="help__close">
+                                                                <svg>
+                                                                    <use href="img/icons/icons.svg#close">
+                                                                    </use>
+                                                                </svg>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="data__item">
+                                                    SSL
+                                                    <div class="data__help help">
+                                                        <button type="button" class="help__btn">
+                                                            <svg>
+                                                                <use href="img/icons/icons.svg#info"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <div class="help__body">
+                                                            Some text
+                                                            <button type="button" class="help__close">
+                                                                <svg>
+                                                                    <use href="img/icons/icons.svg#close">
+                                                                    </use>
+                                                                </svg>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="data__item">
+                                                    Waiting response, sec.
+                                                    <div class="data__help help">
+                                                        <button type="button" class="help__btn">
+                                                            <svg>
+                                                                <use href="img/icons/icons.svg#info"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <div class="help__body">
+                                                            Some text
+                                                            <button type="button" class="help__close">
+                                                                <svg>
+                                                                    <use href="img/icons/icons.svg#close">
+                                                                    </use>
+                                                                </svg>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="data__item">
+                                                    Redirect
+                                                    <div class="data__help help">
+                                                        <button type="button" class="help__btn">
+                                                            <svg>
+                                                                <use href="img/icons/icons.svg#info"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <div class="help__body">
+                                                            Some text
+                                                            <button type="button" class="help__close">
+                                                                <svg>
+                                                                    <use href="img/icons/icons.svg#close">
+                                                                    </use>
+                                                                </svg>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="data__item">
+                                                    Download speed
+                                                    <div class="data__help help">
+                                                        <button type="button" class="help__btn">
+                                                            <svg>
+                                                                <use href="img/icons/icons.svg#info"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <div class="help__body">
+                                                            Some text
+                                                            <button type="button" class="help__close">
+                                                                <svg>
+                                                                    <use href="img/icons/icons.svg#close">
+                                                                    </use>
+                                                                </svg>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="data__item">
+                                                    Page size
+                                                    <div class="data__help help">
+                                                        <button type="button" class="help__btn">
+                                                            <svg>
+                                                                <use href="img/icons/icons.svg#info"></use>
+                                                            </svg>
+                                                        </button>
+                                                        <div class="help__body">
+                                                            Some text
+                                                            <button type="button" class="help__close">
+                                                                <svg>
+                                                                    <use href="img/icons/icons.svg#close">
+                                                                    </use>
+                                                                </svg>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="data__row">
+                                                <div class="data__main data__main_yellow">
+                                                    <span>Morocco</span>
+                                                    <p>Supported by <a href="#" class="data__link">Hostkey</a></p>
+                                                </div>
+                                                <div class="data__item">
+                                                    <span>104.26.12.74</span>
+                                                </div>
+                                                <div class="data__item">
+                                                    <span>1,53</span>
+                                                    <div class="data__graph graph-data">
+                                                        <span class="graph-data__item graph-data__item_yellow"></span>
+                                                        <span class="graph-data__item graph-data__item_purple"></span>
+                                                        <span class="graph-data__item graph-data__item_blue"></span>
+                                                        <span
+                                                            class="graph-data__item graph-data__item_light-green"></span>
+                                                        <span class="graph-data__item graph-data__item_pink"></span>
+                                                        <span class="graph-data__item graph-data__item_green"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="data__item data__item_blue">
+                                                    <span>0,28694</span>
+                                                    <span>(1,87%)</span>
+                                                </div>
+                                                <div class="data__item data__item_yellow">
+                                                    <span>0,070639</span>
+                                                    <span>(4,61%)</span>
+                                                </div>
+                                                <div class="data__item data__item_light-green">
+                                                    <span>0,267355</span>
+                                                    <span>(17,45%)</span>
+                                                </div>
+                                                <div class="data__item data__item_green">
+                                                    <span>0,105293</span>
+                                                    <span>(6,87%)</span>
+                                                </div>
+                                                <div class="data__item data__item_purple">
+                                                    <span>1,0466661 sec. (68,33%);</span>
+                                                    <span>Redirects: 2</span>
+                                                    <span>www.site.com</span>
+                                                </div>
+                                                <div class="data__item data__item_pink">
+                                                    <span>2,25 МБ/sec.</span>
+                                                </div>
+                                                <div class="data__item">
+                                                    <span>273 Kb</span>
+                                                    <span>Compressed to:</span>
+                                                    <span>30 Kb (89%)</span>
+                                                </div>
+                                            </li>
+                                            <li class="data__row">
+                                                <div class="data__main data__main_red">
+                                                    <span>Morocco</span>
+                                                    <p>Supported by <a href="#" class="data__link">Hostkey</a></p>
+                                                </div>
+                                                <div class="data__item">
+                                                    <span>104.26.12.74</span>
+                                                </div>
+                                                <div class="data__item">
+                                                    <span>1,53</span>
+                                                    <div class="data__graph graph-data">
+                                                        <span class="graph-data__item graph-data__item_yellow"></span>
+                                                        <span class="graph-data__item graph-data__item_purple"></span>
+                                                        <span class="graph-data__item graph-data__item_blue"></span>
+                                                        <span
+                                                            class="graph-data__item graph-data__item_light-green"></span>
+                                                        <span class="graph-data__item graph-data__item_pink"></span>
+                                                        <span class="graph-data__item graph-data__item_green"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="data__item data__item_blue">
+                                                    <span>0,28694</span>
+                                                    <span>(1,87%)</span>
+                                                </div>
+                                                <div class="data__item data__item_yellow">
+                                                    <span>0,070639</span>
+                                                    <span>(4,61%)</span>
+                                                </div>
+                                                <div class="data__item data__item_light-green">
+                                                    <span>0,267355</span>
+                                                    <span>(17,45%)</span>
+                                                </div>
+                                                <div class="data__item data__item_green">
+                                                    <span>0,105293</span>
+                                                    <span>(6,87%)</span>
+                                                </div>
+                                                <div class="data__item data__item_purple">
+                                                    <span>1,0466661 sec. (68,33%);</span>
+                                                    <span>Redirects: 2</span>
+                                                    <span>www.site.com</span>
+                                                </div>
+                                                <div class="data__item data__item_pink">
+                                                    <span>2,25 МБ/sec.</span>
+                                                </div>
+                                                <div class="data__item">
+                                                    <span>273 Kb</span>
+                                                    <span>Compressed to:</span>
+                                                    <span>30 Kb (89%)</span>
+                                                </div>
+                                            </li>
+                                            <li class="data__row">
+                                                <div class="data__main data__main_green">
+                                                    <span>Morocco</span>
+                                                    <p>Supported by <a href="#" class="data__link">Hostkey</a></p>
+                                                </div>
+                                                <div class="data__item">
+                                                    <span>104.26.12.74</span>
+                                                </div>
+                                                <div class="data__item">
+                                                    <span>1,53</span>
+                                                    <div class="data__graph graph-data">
+                                                        <span class="graph-data__item graph-data__item_yellow"></span>
+                                                        <span class="graph-data__item graph-data__item_purple"></span>
+                                                        <span class="graph-data__item graph-data__item_blue"></span>
+                                                        <span
+                                                            class="graph-data__item graph-data__item_light-green"></span>
+                                                        <span class="graph-data__item graph-data__item_pink"></span>
+                                                        <span class="graph-data__item graph-data__item_green"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="data__item data__item_blue">
+                                                    <span>0,28694</span>
+                                                    <span>(1,87%)</span>
+                                                </div>
+                                                <div class="data__item data__item_yellow">
+                                                    <span>0,070639</span>
+                                                    <span>(4,61%)</span>
+                                                </div>
+                                                <div class="data__item data__item_light-green">
+                                                    <span>0,267355</span>
+                                                    <span>(17,45%)</span>
+                                                </div>
+                                                <div class="data__item data__item_green">
+                                                    <span>0,105293</span>
+                                                    <span>(6,87%)</span>
+                                                </div>
+                                                <div class="data__item data__item_purple">
+                                                    <span>1,0466661 sec. (68,33%);</span>
+                                                    <span>Redirects: 2</span>
+                                                    <span>www.site.com</span>
+                                                </div>
+                                                <div class="data__item data__item_pink">
+                                                    <span>2,25 МБ/sec.</span>
+                                                </div>
+                                                <div class="data__item">
+                                                    <span>273 Kb</span>
+                                                    <span>Compressed to:</span>
+                                                    <span>30 Kb (89%)</span>
+                                                </div>
+                                            </li>
+                                            <li class="data__row">
+                                                <div class="data__main data__main_blue">
+                                                    <span>Morocco</span>
+                                                    <p>Supported by <a href="#" class="data__link">Hostkey</a></p>
+                                                </div>
+                                                <div class="data__item">
+                                                    <span>104.26.12.74</span>
+                                                </div>
+                                                <div class="data__item">
+                                                    <span>1,53</span>
+                                                    <div class="data__graph graph-data">
+                                                        <span class="graph-data__item graph-data__item_yellow"></span>
+                                                        <span class="graph-data__item graph-data__item_purple"></span>
+                                                        <span class="graph-data__item graph-data__item_blue"></span>
+                                                        <span
+                                                            class="graph-data__item graph-data__item_light-green"></span>
+                                                        <span class="graph-data__item graph-data__item_pink"></span>
+                                                        <span class="graph-data__item graph-data__item_green"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="data__item data__item_blue">
+                                                    <span>0,28694</span>
+                                                    <span>(1,87%)</span>
+                                                </div>
+                                                <div class="data__item data__item_yellow">
+                                                    <span>0,070639</span>
+                                                    <span>(4,61%)</span>
+                                                </div>
+                                                <div class="data__item data__item_light-green">
+                                                    <span>0,267355</span>
+                                                    <span>(17,45%)</span>
+                                                </div>
+                                                <div class="data__item data__item_green">
+                                                    <span>0,105293</span>
+                                                    <span>(6,87%)</span>
+                                                </div>
+                                                <div class="data__item data__item_purple">
+                                                    <span>1,0466661 sec. (68,33%);</span>
+                                                    <span>Redirects: 2</span>
+                                                    <span>www.site.com</span>
+                                                </div>
+                                                <div class="data__item data__item_pink">
+                                                    <span>2,25 МБ/sec.</span>
+                                                </div>
+                                                <div class="data__item">
+                                                    <span>273 Kb</span>
+                                                    <span>Compressed to:</span>
+                                                    <span>30 Kb (89%)</span>
+                                                </div>
+                                            </li>
+                                            <li class="data__row">
+                                                <div class="data__main data__main_light-blue">
+                                                    <span>Morocco</span>
+                                                    <p>Supported by <a href="#" class="data__link">Hostkey</a></p>
+                                                </div>
+                                                <div class="data__item">
+                                                    <span>104.26.12.74</span>
+                                                </div>
+                                                <div class="data__item">
+                                                    <span>1,53</span>
+                                                    <div class="data__graph graph-data">
+                                                        <span class="graph-data__item graph-data__item_yellow"></span>
+                                                        <span class="graph-data__item graph-data__item_purple"></span>
+                                                        <span class="graph-data__item graph-data__item_blue"></span>
+                                                        <span
+                                                            class="graph-data__item graph-data__item_light-green"></span>
+                                                        <span class="graph-data__item graph-data__item_pink"></span>
+                                                        <span class="graph-data__item graph-data__item_green"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="data__item data__item_blue">
+                                                    <span>0,28694</span>
+                                                    <span>(1,87%)</span>
+                                                </div>
+                                                <div class="data__item data__item_yellow">
+                                                    <span>0,070639</span>
+                                                    <span>(4,61%)</span>
+                                                </div>
+                                                <div class="data__item data__item_light-green">
+                                                    <span>0,267355</span>
+                                                    <span>(17,45%)</span>
+                                                </div>
+                                                <div class="data__item data__item_green">
+                                                    <span>0,105293</span>
+                                                    <span>(6,87%)</span>
+                                                </div>
+                                                <div class="data__item data__item_purple">
+                                                    <span>1,0466661 sec. (68,33%);</span>
+                                                    <span>Redirects: 2</span>
+                                                    <span>www.site.com</span>
+                                                </div>
+                                                <div class="data__item data__item_pink">
+                                                    <span>2,25 МБ/sec.</span>
+                                                </div>
+                                                <div class="data__item">
+                                                    <span>273 Kb</span>
+                                                    <span>Compressed to:</span>
+                                                    <span>30 Kb (89%)</span>
+                                                </div>
+                                            </li>
+                                            <li class="data__row">
+                                                <div class="data__main data__main_purple">
+                                                    <span>Morocco</span>
+                                                    <p>Supported by <a href="#" class="data__link">Hostkey</a></p>
+                                                </div>
+                                                <div class="data__item">
+                                                    <span>104.26.12.74</span>
+                                                </div>
+                                                <div class="data__item">
+                                                    <span>1,53</span>
+                                                    <div class="data__graph graph-data">
+                                                        <span class="graph-data__item graph-data__item_yellow"></span>
+                                                        <span class="graph-data__item graph-data__item_purple"></span>
+                                                        <span class="graph-data__item graph-data__item_blue"></span>
+                                                        <span
+                                                            class="graph-data__item graph-data__item_light-green"></span>
+                                                        <span class="graph-data__item graph-data__item_pink"></span>
+                                                        <span class="graph-data__item graph-data__item_green"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="data__item data__item_blue">
+                                                    <span>0,28694</span>
+                                                    <span>(1,87%)</span>
+                                                </div>
+                                                <div class="data__item data__item_yellow">
+                                                    <span>0,070639</span>
+                                                    <span>(4,61%)</span>
+                                                </div>
+                                                <div class="data__item data__item_light-green">
+                                                    <span>0,267355</span>
+                                                    <span>(17,45%)</span>
+                                                </div>
+                                                <div class="data__item data__item_green">
+                                                    <span>0,105293</span>
+                                                    <span>(6,87%)</span>
+                                                </div>
+                                                <div class="data__item data__item_purple">
+                                                    <span>1,0466661 sec. (68,33%);</span>
+                                                    <span>Redirects: 2</span>
+                                                    <span>www.site.com</span>
+                                                </div>
+                                                <div class="data__item data__item_pink">
+                                                    <span>2,25 МБ/sec.</span>
+                                                </div>
+                                                <div class="data__item">
+                                                    <span>273 Kb</span>
+                                                    <span>Compressed to:</span>
+                                                    <span>30 Kb (89%)</span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="dns__results results">
+                                        <p class="results__text">Link to the results of this check:</p>
+                                        <div class="results__input">
+                                            <input type="text"
+                                                value="https://ping-admin.com/free_test/result/16966804016z71qvn1p336v4j9d9725.html">
+                                            <button type="button" class="results__copy">
+                                                <svg>
+                                                    <use href="img/icons/icons.svg#copy-str"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <div class="results__footer">
+                                            <div class="results__help help">
+                                                <button type="button" class="help__btn">
+                                                    <svg>
+                                                        <use href="img/icons/icons.svg#info"></use>
+                                                    </svg>
+                                                </button>
+                                                <div class="help__body">
+                                                    Some text
+                                                    <button type="button" class="help__close">
+                                                        <svg>
+                                                            <use href="img/icons/icons.svg#close"></use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            Link is valid for 90 days
+                                        </div>
+                                    </div>
+                                    <div class="dns__need need">
+                                        <h3 class="need__title title-h3">
+                                            Need free monitoring for <br> <span>rapef.info</span>?
+                                        </h3>
+                                        <a href="#" class="need__link btn_green">
+                                            Get it for free
+                                        </a>
+                                    </div>
+                                    <div class="dns__how how">
+                                        <div class="how__title">How it works?</div>
+                                        <ol class="how__list">
+                                            <li class="how__item">
+                                                Action point 1
+                                            </li>
+                                            <li class="how__item">
+                                                Action point 1
+                                            </li>
+                                            <li class="how__item">
+                                                Action point 1
+                                            </li>
+                                            <li class="how__item">
+                                                Action point 1
+                                            </li>
+                                            <li class="how__item">
+                                                Action point 1
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="tabs__block">
                             <div class="tabs__content">
@@ -350,14 +949,120 @@
                 <button type="submit" class="popup__submit btn_green">Sign in</button>
                 <div class="popup__footer">
                     Not registered?
-                    <a href="#" class="popup__link">Join us</a>
+                    <a href="#" class="popup__link popup-link" data-modal="join">Join us</a>
                 </div>
             </form>
         </div>
     </div>
 </div>
 
-    <script src="js/app.min.js?_v=20231115133005"></script>
+<div class="popup" id="join">
+    <div class="popup__wrapper">
+        <button type="button" class="popup__close">
+            <svg>
+                <use href="img/icons/icons.svg#close"></use>
+            </svg>
+        </button>
+        <div class="popup__content">
+            <div class="popup__image">
+                <picture><source srcset="img/popup/bg.webp" type="image/webp"><img src="img/popup/bg.png" alt="Background"></picture>
+            </div>
+            <form class="popup__form">
+                <h2 class="popup__title title-h3">Create your account</h2>
+                <div class="popup__input input">
+                    <span class="input__label">Full name</span>
+                    <input type="text" placeholder="Full name">
+                </div>
+                <div class="popup__input input">
+                    <span class="input__label">Email</span>
+                    <input type="text" placeholder="Email">
+                </div>
+                <div class="popup__input pass">
+                    <span class="pass__label">Password</span>
+                    <input type="password" placeholder="password">
+                    <button type="button" class="pass__switcher">
+                        <svg>
+                            <use href="img/icons/icons.svg#eye"></use>
+                        </svg>
+                        <svg>
+                            <use href="img/icons/icons.svg#eye2"></use>
+                        </svg>
+                    </button>
+                </div>
+                <button type="submit" class="popup__submit btn_green popup-link" data-modal="verify">Create
+                    account</button>
+                <div class="popup__footer">
+                    Already have an account?
+                    <a href="#" class="popup__link popup-link" data-modal="sign">Sign in</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="popup" id="forgot">
+    <div class="popup__wrapper">
+        <button type="button" class="popup__close">
+            <svg>
+                <use href="img/icons/icons.svg#close"></use>
+            </svg>
+        </button>
+        <div class="popup__content">
+            <div class="popup__image">
+                <picture><source srcset="img/popup/bg.webp" type="image/webp"><img src="img/popup/bg.png" alt="Background"></picture>
+            </div>
+            <form class="popup__form">
+                <h2 class="popup__title title-h3">Reset your password</h2>
+                <div class="popup__desc">
+                    Your password reset link will be sent to the registered email address.
+                </div>
+                <div class="popup__input input">
+                    <span class="input__label">Email</span>
+                    <input type="text" placeholder="Email">
+                </div>
+                <button type="submit" class="popup__submit btn_green">Reset password</button>
+                <div class="popup__footer">
+                    Remembered your password?
+                    <a href="#" class="popup__link popup-link" data-modal="sign">Sign in</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="popup" id="verify">
+    <div class="popup__wrapper">
+        <button type="button" class="popup__close">
+            <svg>
+                <use href="img/icons/icons.svg#close"></use>
+            </svg>
+        </button>
+        <div class="popup__content">
+            <div class="popup__image">
+                <picture><source srcset="img/popup/bg.webp" type="image/webp"><img src="img/popup/bg.png" alt="Background"></picture>
+            </div>
+            <form class="popup__form">
+                <h2 class="popup__title title-h3">Verify your email</h2>
+                <div class="popup__desc">
+                    <p>
+                        Kindly verify your email address by checking your inbox and completing the setup of your
+                        account.
+                    </p>
+                    <p>
+                        Confirmation should arrive promptly, but in case of any delay, reach out to our support team for
+                        assistance.
+                    </p>
+                </div>
+                <div class="popup__footer">
+                    Already have an account?
+                    <a href="#" class="popup__link popup-link" data-modal="sign">Sign in</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+    <script src="js/app.min.js?_v=20231116131046"></script>
 </body>
 
 </html>

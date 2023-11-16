@@ -5,7 +5,7 @@
     <title>RAPEF</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.min.css?_v=20231115133005">
+    <link rel="stylesheet" href="css/style.min.css?_v=20231116131046">
 </head>
 
 <body>
@@ -18,6 +18,21 @@
                 <span>RAPEF</span>
                 <img src="img/logo.svg" alt="Logo">
             </a>
+            <div class="header__search search-header">
+                <button class="search-header__btn">
+                    <svg>
+                        <use href="img/icons/icons.svg#search"></use>
+                    </svg>
+                </button>
+                <form action="#" class="search-header__form">
+                    <input type="text" placeholder="Type anything to search...">
+                    <button class="search-header__close">
+                        <svg>
+                            <use href="img/icons/icons.svg#close"></use>
+                        </svg>
+                    </button>
+                </form>
+            </div>
             <div class="header__user user">
                 <button type="button" class="user__btn">
                     <svg>
@@ -143,14 +158,120 @@
                 <button type="submit" class="popup__submit btn_green">Sign in</button>
                 <div class="popup__footer">
                     Not registered?
-                    <a href="#" class="popup__link">Join us</a>
+                    <a href="#" class="popup__link popup-link" data-modal="join">Join us</a>
                 </div>
             </form>
         </div>
     </div>
 </div>
 
-    <script src="js/app.min.js?_v=20231115133005"></script>
+<div class="popup" id="join">
+    <div class="popup__wrapper">
+        <button type="button" class="popup__close">
+            <svg>
+                <use href="img/icons/icons.svg#close"></use>
+            </svg>
+        </button>
+        <div class="popup__content">
+            <div class="popup__image">
+                <picture><source srcset="img/popup/bg.webp" type="image/webp"><img src="img/popup/bg.png" alt="Background"></picture>
+            </div>
+            <form class="popup__form">
+                <h2 class="popup__title title-h3">Create your account</h2>
+                <div class="popup__input input">
+                    <span class="input__label">Full name</span>
+                    <input type="text" placeholder="Full name">
+                </div>
+                <div class="popup__input input">
+                    <span class="input__label">Email</span>
+                    <input type="text" placeholder="Email">
+                </div>
+                <div class="popup__input pass">
+                    <span class="pass__label">Password</span>
+                    <input type="password" placeholder="password">
+                    <button type="button" class="pass__switcher">
+                        <svg>
+                            <use href="img/icons/icons.svg#eye"></use>
+                        </svg>
+                        <svg>
+                            <use href="img/icons/icons.svg#eye2"></use>
+                        </svg>
+                    </button>
+                </div>
+                <button type="submit" class="popup__submit btn_green popup-link" data-modal="verify">Create
+                    account</button>
+                <div class="popup__footer">
+                    Already have an account?
+                    <a href="#" class="popup__link popup-link" data-modal="sign">Sign in</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="popup" id="forgot">
+    <div class="popup__wrapper">
+        <button type="button" class="popup__close">
+            <svg>
+                <use href="img/icons/icons.svg#close"></use>
+            </svg>
+        </button>
+        <div class="popup__content">
+            <div class="popup__image">
+                <picture><source srcset="img/popup/bg.webp" type="image/webp"><img src="img/popup/bg.png" alt="Background"></picture>
+            </div>
+            <form class="popup__form">
+                <h2 class="popup__title title-h3">Reset your password</h2>
+                <div class="popup__desc">
+                    Your password reset link will be sent to the registered email address.
+                </div>
+                <div class="popup__input input">
+                    <span class="input__label">Email</span>
+                    <input type="text" placeholder="Email">
+                </div>
+                <button type="submit" class="popup__submit btn_green">Reset password</button>
+                <div class="popup__footer">
+                    Remembered your password?
+                    <a href="#" class="popup__link popup-link" data-modal="sign">Sign in</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="popup" id="verify">
+    <div class="popup__wrapper">
+        <button type="button" class="popup__close">
+            <svg>
+                <use href="img/icons/icons.svg#close"></use>
+            </svg>
+        </button>
+        <div class="popup__content">
+            <div class="popup__image">
+                <picture><source srcset="img/popup/bg.webp" type="image/webp"><img src="img/popup/bg.png" alt="Background"></picture>
+            </div>
+            <form class="popup__form">
+                <h2 class="popup__title title-h3">Verify your email</h2>
+                <div class="popup__desc">
+                    <p>
+                        Kindly verify your email address by checking your inbox and completing the setup of your
+                        account.
+                    </p>
+                    <p>
+                        Confirmation should arrive promptly, but in case of any delay, reach out to our support team for
+                        assistance.
+                    </p>
+                </div>
+                <div class="popup__footer">
+                    Already have an account?
+                    <a href="#" class="popup__link popup-link" data-modal="sign">Sign in</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+    <script src="js/app.min.js?_v=20231116131046"></script>
 </body>
 
 </html>

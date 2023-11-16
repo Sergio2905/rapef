@@ -1,0 +1,1380 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>RAPEF</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css?_v=20231116131046">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <header class="header">
+    <div class="header__container container">
+        <div class="header__body">
+            <a href="#" class="header__logo logo">
+                <span>RAPEF</span>
+                <img src="img/logo.svg" alt="Logo">
+            </a>
+            <div class="header__search search-header">
+                <button class="search-header__btn">
+                    <svg>
+                        <use href="img/icons/icons.svg#search"></use>
+                    </svg>
+                </button>
+                <form action="#" class="search-header__form">
+                    <input type="text" placeholder="Type anything to search...">
+                    <button class="search-header__close">
+                        <svg>
+                            <use href="img/icons/icons.svg#close"></use>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+            <div class="header__user user">
+                <button type="button" class="user__btn">
+                    <svg>
+                        <use href="img/icons/icons.svg#user"></use>
+                    </svg>
+                </button>
+                <div class="user__body">
+                    <a href="mailto:saruch123@gmail.com" class="user__email">saruch123@gmail.com</a>
+                    <nav class="user__menu">
+                        <a href="#" class="user__link">
+                            <svg>
+                                <use href="img/icons/icons.svg#monitors"></use>
+                            </svg>
+                            Monitors
+                        </a>
+                        <a href="#" class="user__link">
+                            <svg>
+                                <use href="img/icons/icons.svg#settings"></use>
+                            </svg>
+                            Account settings
+                        </a>
+                    </nav>
+                    <button class="user__sign-out">Sign out</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+        <div class="page">
+            <div class="page__container container">
+                <h1 class="page__title page__title_center title-h3">Add new monitoring</h1>
+                <p class="page__desc page__desc_center">
+                    Add new monitoring tasks and create fine-tuning settings.
+                </p>
+                <div class="page__body">
+                    <aside class="page__sidebar sidebar">
+                        <nav class="sidebar__menu">
+                            <a href="#" class="sidebar__link">Basic</a>
+                            <a href="#" class="sidebar__link active">Advanced</a>
+                            <a href="#" class="sidebar__link">Interactive</a>
+                        </nav>
+                    </aside>
+                    <form action="#" class="page__form form form_monitoring">
+                        <h2 class="form__title">Only basic settings</h2>
+                        <div class="form__section section-form">
+                            <div class="section-form__header">
+                                Тип проверки:
+                                <div class="section-form__help help">
+                                    <button type="button" class="help__btn">
+                                        <svg>
+                                            <use href="img/icons/icons.svg#info"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="help__body">
+                                        <h6 class="help__title">
+                                            HTTP (метод HEAD)
+                                        </h6>
+                                        <p>
+                                            Отправляется запрос с помощью метода HEAD, в ответ на который проверяемый
+                                            сервис посылает только код ответа (заголовки) без кода (тела) самой
+                                            страницы. Если код ответа 2XX, 3XX (или указанный в дополнительных
+                                            настройках задачи), то проверяемый сервис работает, иначе ошибка. Подробнее
+                                            про HEAD <a href="#" class="help__link">здесь</a>.
+                                        </p>
+                                        <h6 class="help__title">
+                                            HTTP (метод GET или POST)
+                                        </h6>
+                                        <p>
+                                            При этой проверке мы загружаем ещё и код самой страницы (размер страницы
+                                            должен быть не более 500 КБ). При этом виде проверки возможна проверка
+                                            определённого текста в коде страницы.
+                                        </p>
+                                        <h6 class="help__title">
+                                            HTTPS
+                                        </h6>
+                                        <p>
+                                            Проверки аналогичны проверкам HTTP, добавляется возможность проверять
+                                            SSL-сертификат сервера.
+                                        </p>
+                                        <h6 class="help__title">
+                                            FTP
+                                        </h6>
+                                        <p>
+                                            Соединение с FTP-сервером с авторизацией: либо с указанным именем
+                                            пользователя и паролем, либо с именем пользователя anonymous. Можно
+                                            проверять наличие конкретного файла, директории на сервере.
+                                        </p>
+                                        <h6 class="help__title">
+                                            Соединение с FTP (без авторизации)
+                                        </h6>
+                                        <p>
+                                            Проверка только соединения с FTP-сервером, т.е. ответа FTP-сервера, который
+                                            выводится ещё до предложения авторизоваться.
+                                        </p>
+                                        <h6 class="help__title">
+                                            MySQL, PostgreSQL
+                                        </h6>
+                                        <p>
+                                            Проверка баз данных.
+                                        </p>
+                                        <h6 class="help__title">
+                                            POP3, SMTP, IMAP
+                                        </h6>
+                                        <p>
+                                            Проверяется ответ почтового сервиса до предложения авторизоваться.
+                                        </p>
+                                        <h6 class="help__title">
+                                            DNS
+                                        </h6>
+                                        <p>
+                                            Возможность проверки SOA, A, MX, CNAME.
+                                        </p>
+                                        <h6 class="help__title">
+                                            Ping
+                                        </h6>
+                                        <p>
+                                            Рекомендуем выбирать этот вид проверки, если на сервере не используется
+                                            никакой из сервисов, перечисленных выше, т.к. гораздо лучше проверять
+                                            конкретный сервис, а не просто пинговать сервер.
+                                        </p>
+                                        <h6 class="help__title">
+                                            Telnet
+                                        </h6>
+                                        <p>
+                                            Проверка любого сетевого сервиса, работающего по протоколу TCP/IP.
+                                        </p>
+                                        <button type="button" class="help__close">
+                                            <svg>
+                                                <use href="img/icons/icons.svg#close"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section-form__select select-box">
+                                <div class="options-container">
+                                    <div class="option">
+                                        <input type="radio" id="http-head" name="check-type" value="HTTP (метод HEAD)">
+                                        <label for="http-head">HTTP (метод HEAD)</label>
+                                    </div>
+                                    <div class="option">
+                                        <input type="radio" id="http-get" name="check-type" value="HTTP (метод GET)">
+                                        <label for="http-get">HTTP (метод GET)</label>
+                                    </div>
+                                    <div class="option">
+                                        <input type="radio" id="http-post" name="check-type" value="HTTP (метод POST)">
+                                        <label for="http-post">HTTP (метод POST)</label>
+                                    </div>
+                                    <div class="option">
+                                        <input type="radio" id="ftp" name="check-type" value="FTP">
+                                        <label for="ftp">FTP</label>
+                                    </div>
+                                    <div class="option">
+                                        <input type="radio" id="ftp2" name="check-type"
+                                            value="Соединение с FTP (без авторизации)">
+                                        <label for="ftp2">Соединение с FTP (без авторизации)</label>
+                                    </div>
+                                    <div class="option">
+                                        <input type="radio" id="mysql" name="check-type" value="MySQL">
+                                        <label for="mysql">MySQL</label>
+                                    </div>
+                                    <div class="option">
+                                        <input type="radio" id="postgresql" name="check-type" value="PostgreSQL">
+                                        <label for="postgresql">PostgreSQL</label>
+                                    </div>
+                                    <div class="option">
+                                        <input type="radio" id="pop3" name="check-type" value="POP3">
+                                        <label for="pop3">POP3</label>
+                                    </div>
+                                    <div class="option">
+                                        <input type="radio" id="smtp" name="check-type" value="SMTP">
+                                        <label for="smtp">SMTP</label>
+                                    </div>
+                                    <div class="option">
+                                        <input type="radio" id="imap" name="check-type" value="IMAP">
+                                        <label for="imap">IMAP</label>
+                                    </div>
+                                    <div class="option">
+                                        <input type="radio" id="dns" name="check-type" value="DNS">
+                                        <label for="dns">DNS</label>
+                                    </div>
+                                    <div class="option">
+                                        <input type="radio" id="ping" name="check-type" value="Ping">
+                                        <label for="ping">Ping</label>
+                                    </div>
+                                    <div class="option">
+                                        <input type="radio" id="telnet" name="check-type" value="Telnet">
+                                        <label for="telnet">Telnet</label>
+                                    </div>
+                                </div>
+                                <div class="selected">
+                                    HTTP (метод HEAD)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__section section-form">
+                            <div class="section-form__header">
+                                Адрес или IP:
+                                <div class="section-form__help help">
+                                    <button type="button" class="help__btn">
+                                        <svg>
+                                            <use href="img/icons/icons.svg#info"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="help__body">
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat, porro.
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium suscipit
+                                        inventore eligendi magnam expedita voluptatum perspiciatis voluptatibus,
+                                        recusandae fuga adipisci.
+                                        <button type="button" class="help__close">
+                                            <svg>
+                                                <use href="img/icons/icons.svg#close"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section-form__input">
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="form__section section-form">
+                            <div class="section-form__header">
+                                IP:
+                                <div class="section-form__help help">
+                                    <button type="button" class="help__btn">
+                                        <svg>
+                                            <use href="img/icons/icons.svg#info"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="help__body">
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat, porro.
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium suscipit
+                                        inventore eligendi magnam expedita voluptatum perspiciatis voluptatibus,
+                                        recusandae fuga adipisci.
+                                        <button type="button" class="help__close">
+                                            <svg>
+                                                <use href="img/icons/icons.svg#close"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section-form__input">
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="form__section section-form">
+                            <div class="section-form__header">
+                                Название задачи:
+                                <div class="section-form__help help">
+                                    <button type="button" class="help__btn">
+                                        <svg>
+                                            <use href="img/icons/icons.svg#info"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="help__body">
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat, porro.
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium suscipit
+                                        inventore eligendi magnam expedita voluptatum perspiciatis voluptatibus,
+                                        recusandae fuga adipisci.
+                                        <button type="button" class="help__close">
+                                            <svg>
+                                                <use href="img/icons/icons.svg#close"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section-form__input">
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="form__section section-form">
+                            <div class="section-form__header">
+                                Пояснение для уведомлений с ошибками:
+                                <div class="section-form__help help">
+                                    <button type="button" class="help__btn">
+                                        <svg>
+                                            <use href="img/icons/icons.svg#info"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="help__body">
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat, porro.
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium suscipit
+                                        inventore eligendi magnam expedita voluptatum perspiciatis voluptatibus,
+                                        recusandae fuga adipisci.
+                                        <button type="button" class="help__close">
+                                            <svg>
+                                                <use href="img/icons/icons.svg#close"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section-form__input">
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="form__section section-form">
+                            <div class="section-form__header">
+                                Периодичность проверки:
+                                <div class="section-form__help help">
+                                    <button type="button" class="help__btn">
+                                        <svg>
+                                            <use href="img/icons/icons.svg#info"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="help__body">
+                                        <p>
+                                            Как часто будут выполняться проверки вашего сервиса. Если вы хотите
+                                            моментально
+                                            получить уведомление о неработающем сервисе, укажите проверку раз минуту.
+                                            Если
+                                            вы хотите тратить в месяц не очень много денег на проверку сервисов,
+                                            укажите,
+                                            чтобы проверки выполнялись реже.
+                                        </p>
+                                        <button type="button" class="help__close">
+                                            <svg>
+                                                <use href="img/icons/icons.svg#close"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section-form__select select-box">
+                                <div class="options-container">
+                                    <div class="option">
+                                        <input type="radio" id="period-5" name="period" value="Раз в 5 минут">
+                                        <label for="period-5">Раз в 5 минут</label>
+                                    </div>
+                                    <div class="option">
+                                        <input type="radio" id="period-10" name="period" value="Раз в 10 минут">
+                                        <label for="period-10">Раз в 10 минут</label>
+                                    </div>
+                                    <div class="option">
+                                        <input type="radio" id="period-30" name="period" value="Раз в 30 минут">
+                                        <label for="period-30">Раз в 30 минут</label>
+                                    </div>
+                                    <div class="option">
+                                        <input type="radio" id="period-60" name="period" value="Раз в 60 минут">
+                                        <label for="period-60">Раз в 60 минут</label>
+                                    </div>
+                                </div>
+                                <div class="selected">
+                                    Раз в 5 минут
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__section section-form">
+                            <div class="section-form__header">
+                                Периодичность проверки во время ошибки:
+                                <div class="section-form__help help">
+                                    <button type="button" class="help__btn">
+                                        <svg>
+                                            <use href="img/icons/icons.svg#info"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="help__body">
+                                        <p>
+                                            Как часто будут выполняться проверки вашего сервиса. Если вы хотите
+                                            моментально
+                                            получить уведомление о неработающем сервисе, укажите проверку раз минуту.
+                                            Если
+                                            вы хотите тратить в месяц не очень много денег на проверку сервисов,
+                                            укажите,
+                                            чтобы проверки выполнялись реже.
+                                        </p>
+                                        <button type="button" class="help__close">
+                                            <svg>
+                                                <use href="img/icons/icons.svg#close"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section-form__select select-box">
+                                <div class="options-container">
+                                    <div class="option">
+                                        <input type="radio" id="period-5" name="period" value="Раз в 5 минут">
+                                        <label for="period-5">Раз в 5 минут</label>
+                                    </div>
+                                    <div class="option">
+                                        <input type="radio" id="period-10" name="period" value="Раз в 10 минут">
+                                        <label for="period-10">Раз в 10 минут</label>
+                                    </div>
+                                    <div class="option">
+                                        <input type="radio" id="period-30" name="period" value="Раз в 30 минут">
+                                        <label for="period-30">Раз в 30 минут</label>
+                                    </div>
+                                    <div class="option">
+                                        <input type="radio" id="period-60" name="period" value="Раз в 60 минут">
+                                        <label for="period-60">Раз в 60 минут</label>
+                                    </div>
+                                </div>
+                                <div class="selected">
+                                    Такая же, как и обычная периодичность
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__section section-form">
+                            <div class="section-form__header">
+                                Отправлять уведомления о неработающем сервисе:
+                                <div class="section-form__help help">
+                                    <button type="button" class="help__btn">
+                                        <svg>
+                                            <use href="img/icons/icons.svg#info"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="help__body">
+                                        <p>
+                                            Как часто будут выполняться проверки вашего сервиса. Если вы хотите
+                                            моментально
+                                            получить уведомление о неработающем сервисе, укажите проверку раз минуту.
+                                            Если
+                                            вы хотите тратить в месяц не очень много денег на проверку сервисов,
+                                            укажите,
+                                            чтобы проверки выполнялись реже.
+                                        </p>
+                                        <button type="button" class="help__close">
+                                            <svg>
+                                                <use href="img/icons/icons.svg#close"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section-form__select select-box">
+                                <div class="options-container">
+                                    <div class="option">
+                                        <input type="radio" id="period-5" name="period"
+                                            value="Только после второй подряд ошибки">
+                                        <label for="period-5">Только после второй подряд ошибки</label>
+                                    </div>
+                                    <div class="option">
+                                        <input type="radio" id="period-10" name="period" value="Раз в 10 минут">
+                                        <label for="period-10">Раз в 10 минут</label>
+                                    </div>
+                                    <div class="option">
+                                        <input type="radio" id="period-30" name="period" value="Раз в 30 минут">
+                                        <label for="period-30">Раз в 30 минут</label>
+                                    </div>
+                                    <div class="option">
+                                        <input type="radio" id="period-60" name="period" value="Раз в 60 минут">
+                                        <label for="period-60">Раз в 60 минут</label>
+                                    </div>
+                                </div>
+                                <div class="selected">
+                                    Только после второй подряд ошибки
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__section section-form">
+                            <div class="section-form__options">
+                                <div class="section-form__desc">
+                                    Отправлять уведомления
+                                    о возобновлении работы
+                                    сервиса после ошибки:
+                                    <div class="section-form__help help">
+                                        <button type="button" class="help__btn">
+                                            <svg>
+                                                <use href="img/icons/icons.svg#info"></use>
+                                            </svg>
+                                        </button>
+                                        <div class="help__body">
+                                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat, porro.
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium suscipit
+                                            inventore eligendi magnam expedita voluptatum perspiciatis voluptatibus,
+                                            recusandae fuga adipisci.
+                                            <button type="button" class="help__close">
+                                                <svg>
+                                                    <use href="img/icons/icons.svg#close"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="section-form__switcher switcher">
+                                    <span>Enabled</span>
+                                    <span>Disabled</span>
+                                    <input type="checkbox">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="form__section section-form">
+                            <div class="section-form__header">
+                                Отправлять уведомления об ошибке повторно:
+                                <div class="section-form__help help">
+                                    <button type="button" class="help__btn">
+                                        <svg>
+                                            <use href="img/icons/icons.svg#info"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="help__body">
+                                        <p>
+                                            Как часто будут выполняться проверки вашего сервиса. Если вы хотите
+                                            моментально
+                                            получить уведомление о неработающем сервисе, укажите проверку раз минуту.
+                                            Если
+                                            вы хотите тратить в месяц не очень много денег на проверку сервисов,
+                                            укажите,
+                                            чтобы проверки выполнялись реже.
+                                        </p>
+                                        <button type="button" class="help__close">
+                                            <svg>
+                                                <use href="img/icons/icons.svg#close"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section-form__select select-box">
+                                <div class="options-container">
+                                    <div class="option">
+                                        <input type="radio" id="period-5" name="period"
+                                            value="Только после второй подряд ошибки">
+                                        <label for="period-5">Только после второй подряд ошибки</label>
+                                    </div>
+                                    <div class="option">
+                                        <input type="radio" id="period-10" name="period" value="Раз в 10 минут">
+                                        <label for="period-10">Раз в 10 минут</label>
+                                    </div>
+                                    <div class="option">
+                                        <input type="radio" id="period-30" name="period" value="Раз в 30 минут">
+                                        <label for="period-30">Раз в 30 минут</label>
+                                    </div>
+                                    <div class="option">
+                                        <input type="radio" id="period-60" name="period" value="Раз в 60 минут">
+                                        <label for="period-60">Раз в 60 минут</label>
+                                    </div>
+                                </div>
+                                <div class="selected">
+                                    Только после второй подряд ошибки
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__section section-form">
+                            <div class="section-form__header">
+                                Куда отправлять уведомления об изменении состояния сервиса:
+                            </div>
+                            <div class="section-form__info">
+                                Указать дополнительные контакты можно в <a href="#"
+                                    class="section-form__link">настройках</a>.
+                            </div>
+                            <div class="section-form__select select-box select-box_inner">
+                                <div class="options-container">
+                                    <div class="option">
+                                        <input type="radio" id="mail" name="target" value="mail">
+                                        <label for="mail">
+                                            <svg class="fill">
+                                                <use href="img/icons/icons.svg#mail"></use>
+                                            </svg>
+                                            saruch123@gmail.com
+                                        </label>
+                                    </div>
+                                    <div class="option">
+                                        <input type="radio" id="telegram" name="target" value="telegram">
+                                        <label for="telegram">
+                                            <svg>
+                                                <use href="img/icons/icons.svg#telegram"></use>
+                                            </svg>
+                                            chester123
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="selected">
+                                    &nbsp;
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__section section-form">
+                            <div class="section-form__options">
+                                <div class="section-form__desc">
+                                    Проверка наличия в базах Роскомнадзора, Spamhaus и др.:
+                                    <div class="section-form__help help">
+                                        <button type="button" class="help__btn">
+                                            <svg>
+                                                <use href="img/icons/icons.svg#info"></use>
+                                            </svg>
+                                        </button>
+                                        <div class="help__body">
+                                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat, porro.
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium suscipit
+                                            inventore eligendi magnam expedita voluptatum perspiciatis voluptatibus,
+                                            recusandae fuga adipisci.
+                                            <button type="button" class="help__close">
+                                                <svg>
+                                                    <use href="img/icons/icons.svg#close"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="section-form__switcher switcher">
+                                    <span>Enabled</span>
+                                    <span>Disabled</span>
+                                    <input type="checkbox">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="form__section section-form">
+                            <div class="section-form__options">
+                                <div class="section-form__desc">
+                                    Проверка сайта на вирусы:
+                                    <div class="section-form__help help">
+                                        <button type="button" class="help__btn">
+                                            <svg>
+                                                <use href="img/icons/icons.svg#info"></use>
+                                            </svg>
+                                        </button>
+                                        <div class="help__body">
+                                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat, porro.
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium suscipit
+                                            inventore eligendi magnam expedita voluptatum perspiciatis voluptatibus,
+                                            recusandae fuga adipisci.
+                                            <button type="button" class="help__close">
+                                                <svg>
+                                                    <use href="img/icons/icons.svg#close"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="section-form__switcher switcher">
+                                    <span>Enabled</span>
+                                    <span>Disabled</span>
+                                    <input type="checkbox">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="form__section section-form">
+                            <div class="section-form__options">
+                                <div class="section-form__desc">
+                                    Проверять изменения в WHOIS:
+                                    <div class="section-form__help help">
+                                        <button type="button" class="help__btn">
+                                            <svg>
+                                                <use href="img/icons/icons.svg#info"></use>
+                                            </svg>
+                                        </button>
+                                        <div class="help__body">
+                                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat, porro.
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium suscipit
+                                            inventore eligendi magnam expedita voluptatum perspiciatis voluptatibus,
+                                            recusandae fuga adipisci.
+                                            <button type="button" class="help__close">
+                                                <svg>
+                                                    <use href="img/icons/icons.svg#close"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="section-form__switcher switcher">
+                                    <span>Enabled</span>
+                                    <span>Disabled</span>
+                                    <input type="checkbox">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="form__section section-form">
+                            <div class="section-form__options">
+                                <div class="section-form__desc">
+                                    Создавать RSS с состоянием задачи:
+                                    <div class="section-form__help help">
+                                        <button type="button" class="help__btn">
+                                            <svg>
+                                                <use href="img/icons/icons.svg#info"></use>
+                                            </svg>
+                                        </button>
+                                        <div class="help__body">
+                                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat, porro.
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium suscipit
+                                            inventore eligendi magnam expedita voluptatum perspiciatis voluptatibus,
+                                            recusandae fuga adipisci.
+                                            <button type="button" class="help__close">
+                                                <svg>
+                                                    <use href="img/icons/icons.svg#close"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="section-form__switcher switcher">
+                                    <span>Enabled</span>
+                                    <span>Disabled</span>
+                                    <input type="checkbox">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="form__section section-form">
+                            <div class="section-form__options">
+                                <div class="section-form__desc">
+                                    Следовать ли редиректам:
+                                    <div class="section-form__help help">
+                                        <button type="button" class="help__btn">
+                                            <svg>
+                                                <use href="img/icons/icons.svg#info"></use>
+                                            </svg>
+                                        </button>
+                                        <div class="help__body">
+                                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat, porro.
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium suscipit
+                                            inventore eligendi magnam expedita voluptatum perspiciatis voluptatibus,
+                                            recusandae fuga adipisci.
+                                            <button type="button" class="help__close">
+                                                <svg>
+                                                    <use href="img/icons/icons.svg#close"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="section-form__switcher switcher">
+                                    <span>Enabled</span>
+                                    <span>Disabled</span>
+                                    <input type="checkbox">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="form__section section-form">
+                            <div class="section-form__header">
+                                Имя пользователя:
+                                <div class="section-form__help help">
+                                    <button type="button" class="help__btn">
+                                        <svg>
+                                            <use href="img/icons/icons.svg#info"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="help__body">
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat, porro.
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium suscipit
+                                        inventore eligendi magnam expedita voluptatum perspiciatis voluptatibus,
+                                        recusandae fuga adipisci.
+                                        <button type="button" class="help__close">
+                                            <svg>
+                                                <use href="img/icons/icons.svg#close"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section-form__input">
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="form__section section-form">
+                            <div class="section-form__header">
+                                Пароль:
+                                <div class="section-form__help help">
+                                    <button type="button" class="help__btn">
+                                        <svg>
+                                            <use href="img/icons/icons.svg#info"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="help__body">
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat, porro.
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium suscipit
+                                        inventore eligendi magnam expedita voluptatum perspiciatis voluptatibus,
+                                        recusandae fuga adipisci.
+                                        <button type="button" class="help__close">
+                                            <svg>
+                                                <use href="img/icons/icons.svg#close"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section-form__input">
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="form__section section-form">
+                            <div class="section-form__header">
+                                Реферер:
+                                <div class="section-form__help help">
+                                    <button type="button" class="help__btn">
+                                        <svg>
+                                            <use href="img/icons/icons.svg#info"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="help__body">
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat, porro.
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium suscipit
+                                        inventore eligendi magnam expedita voluptatum perspiciatis voluptatibus,
+                                        recusandae fuga adipisci.
+                                        <button type="button" class="help__close">
+                                            <svg>
+                                                <use href="img/icons/icons.svg#close"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section-form__input">
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="form__section section-form">
+                            <div class="section-form__header">
+                                User Agent:
+                                <div class="section-form__help help">
+                                    <button type="button" class="help__btn">
+                                        <svg>
+                                            <use href="img/icons/icons.svg#info"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="help__body">
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat, porro.
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium suscipit
+                                        inventore eligendi magnam expedita voluptatum perspiciatis voluptatibus,
+                                        recusandae fuga adipisci.
+                                        <button type="button" class="help__close">
+                                            <svg>
+                                                <use href="img/icons/icons.svg#close"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section-form__input">
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="form__section section-form">
+                            <div class="section-form__header">
+                                Код ответа в диапазоне:
+                                <div class="section-form__help help">
+                                    <button type="button" class="help__btn">
+                                        <svg>
+                                            <use href="img/icons/icons.svg#info"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="help__body">
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat, porro.
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium suscipit
+                                        inventore eligendi magnam expedita voluptatum perspiciatis voluptatibus,
+                                        recusandae fuga adipisci.
+                                        <button type="button" class="help__close">
+                                            <svg>
+                                                <use href="img/icons/icons.svg#close"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section-form__wrapper">
+                                <div class="section-form__input">
+                                    <input type="text">
+                                </div>
+                                <div class="section-form__input">
+                                    <input type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__section section-form">
+                            <div class="section-form__header">
+                                Код ответа в диапазоне:
+                                <div class="section-form__help help">
+                                    <button type="button" class="help__btn">
+                                        <svg>
+                                            <use href="img/icons/icons.svg#info"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="help__body">
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat, porro.
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium suscipit
+                                        inventore eligendi magnam expedita voluptatum perspiciatis voluptatibus,
+                                        recusandae fuga adipisci.
+                                        <button type="button" class="help__close">
+                                            <svg>
+                                                <use href="img/icons/icons.svg#close"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section-form__wrapper section-form__wrapper_wide">
+                                <div class="section-form__input">
+                                    <input type="text">
+                                </div>
+                                <div class="section-form__input">
+                                    <input type="text">
+                                </div>
+                                <span>байт</span>
+                            </div>
+                        </div>
+                        <div class="form__section section-form">
+                            <div class="section-form__options">
+                                <div class="section-form__desc">
+                                    Обрабатывать cookies:
+                                    <div class="section-form__help help">
+                                        <button type="button" class="help__btn">
+                                            <svg>
+                                                <use href="img/icons/icons.svg#info"></use>
+                                            </svg>
+                                        </button>
+                                        <div class="help__body">
+                                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat, porro.
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium suscipit
+                                            inventore eligendi magnam expedita voluptatum perspiciatis voluptatibus,
+                                            recusandae fuga adipisci.
+                                            <button type="button" class="help__close">
+                                                <svg>
+                                                    <use href="img/icons/icons.svg#close"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="section-form__switcher switcher">
+                                    <span>Enabled</span>
+                                    <span>Disabled</span>
+                                    <input type="checkbox">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="form__section section-form">
+                            <div class="section-form__header">
+                                Текст запроса «Set-Cookie»:
+                                <div class="section-form__help help">
+                                    <button type="button" class="help__btn">
+                                        <svg>
+                                            <use href="img/icons/icons.svg#info"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="help__body">
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat, porro.
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium suscipit
+                                        inventore eligendi magnam expedita voluptatum perspiciatis voluptatibus,
+                                        recusandae fuga adipisci.
+                                        <button type="button" class="help__close">
+                                            <svg>
+                                                <use href="img/icons/icons.svg#close"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section-form__input">
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="form__section section-form">
+                            <div class="section-form__options">
+                                <div class="section-form__desc">
+                                    Использовать сжатие:
+                                    <div class="section-form__help help">
+                                        <button type="button" class="help__btn">
+                                            <svg>
+                                                <use href="img/icons/icons.svg#info"></use>
+                                            </svg>
+                                        </button>
+                                        <div class="help__body">
+                                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat, porro.
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium suscipit
+                                            inventore eligendi magnam expedita voluptatum perspiciatis voluptatibus,
+                                            recusandae fuga adipisci.
+                                            <button type="button" class="help__close">
+                                                <svg>
+                                                    <use href="img/icons/icons.svg#close"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="section-form__switcher switcher">
+                                    <span>Enabled</span>
+                                    <span>Disabled</span>
+                                    <input type="checkbox">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="form__section section-form">
+                            <div class="section-form__header">
+                                Передавать Accept-Language:
+                                <div class="section-form__help help">
+                                    <button type="button" class="help__btn">
+                                        <svg>
+                                            <use href="img/icons/icons.svg#info"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="help__body">
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat, porro.
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium suscipit
+                                        inventore eligendi magnam expedita voluptatum perspiciatis voluptatibus,
+                                        recusandae fuga adipisci.
+                                        <button type="button" class="help__close">
+                                            <svg>
+                                                <use href="img/icons/icons.svg#close"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section-form__input">
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="form__section section-form">
+                            <div class="section-form__header">
+                                Максимальное ожидание ответа:
+                                <div class="section-form__help help">
+                                    <button type="button" class="help__btn">
+                                        <svg>
+                                            <use href="img/icons/icons.svg#info"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="help__body">
+                                        <p>
+                                            Как часто будут выполняться проверки вашего сервиса. Если вы хотите
+                                            моментально
+                                            получить уведомление о неработающем сервисе, укажите проверку раз минуту.
+                                            Если
+                                            вы хотите тратить в месяц не очень много денег на проверку сервисов,
+                                            укажите,
+                                            чтобы проверки выполнялись реже.
+                                        </p>
+                                        <button type="button" class="help__close">
+                                            <svg>
+                                                <use href="img/icons/icons.svg#close"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section-form__select select-box">
+                                <div class="options-container">
+                                    <div class="option">
+                                        <input type="radio" id="seconds-6" name="time" value="6 секунд">
+                                        <label for="seconds-6">6 секунд</label>
+                                    </div>
+                                    <div class="option">
+                                        <input type="radio" id="seconds-7" name="time" value="7 секунд">
+                                        <label for="seconds-7">7 секунд</label>
+                                    </div>
+                                    <div class="option">
+                                        <input type="radio" id="seconds-8" name="time" value="8 секунд">
+                                        <label for="seconds-8">8 секунд</label>
+                                    </div>
+                                    <div class="option">
+                                        <input type="radio" id="seconds-9" name="time" value="9 секунд">
+                                        <label for="seconds-9">9 секунд</label>
+                                    </div>
+                                </div>
+                                <div class="selected">
+                                    6 секунд
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__section section-form">
+                            <div class="section-form__header">
+                                Алгоритм проверки:
+                                <div class="section-form__help help">
+                                    <button type="button" class="help__btn">
+                                        <svg>
+                                            <use href="img/icons/icons.svg#info"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="help__body">
+                                        <p>
+                                            Как часто будут выполняться проверки вашего сервиса. Если вы хотите
+                                            моментально
+                                            получить уведомление о неработающем сервисе, укажите проверку раз минуту.
+                                            Если
+                                            вы хотите тратить в месяц не очень много денег на проверку сервисов,
+                                            укажите,
+                                            чтобы проверки выполнялись реже.
+                                        </p>
+                                        <button type="button" class="help__close">
+                                            <svg>
+                                                <use href="img/icons/icons.svg#close"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section-form__select select-box">
+                                <div class="options-container">
+                                    <div class="option">
+                                        <input type="radio" id="algo-auto" name="algo"
+                                            value="Авто (точка мониторинга на выбор системы)">
+                                        <label for="algo-auto">Авто (точка мониторинга на выбор системы)</label>
+                                    </div>
+                                    <div class="option">
+                                        <input type="radio" id="algo-2" name="algo" value="Option 2">
+                                        <label for="algo-2">Option 2</label>
+                                    </div>
+                                    <div class="option">
+                                        <input type="radio" id="algo-3" name="algo" value="Option 3">
+                                        <label for="algo-3">Option 3</label>
+                                    </div>
+                                    <div class="option">
+                                        <input type="radio" id="algo-4" name="algo" value="Option 4">
+                                        <label for="algo-4">Option 4</label>
+                                    </div>
+                                </div>
+                                <div class="selected">
+                                    Авто (точка мониторинга на выбор системы)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__section section-form">
+                            <div class="section-form__options">
+                                <div class="section-form__desc">
+                                    Строить графики со временем ответа сайта:
+                                    <div class="section-form__help help">
+                                        <button type="button" class="help__btn">
+                                            <svg>
+                                                <use href="img/icons/icons.svg#info"></use>
+                                            </svg>
+                                        </button>
+                                        <div class="help__body">
+                                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat, porro.
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium suscipit
+                                            inventore eligendi magnam expedita voluptatum perspiciatis voluptatibus,
+                                            recusandae fuga adipisci.
+                                            <button type="button" class="help__close">
+                                                <svg>
+                                                    <use href="img/icons/icons.svg#close"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="section-form__switcher switcher">
+                                    <span>Enabled</span>
+                                    <span>Disabled</span>
+                                    <input type="checkbox">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="form__section section-form">
+                            <div class="section-form__options">
+                                <div class="section-form__desc">
+                                    Добавляется неработающий
+                                    в данный момент сервис:
+                                    <div class="section-form__help help">
+                                        <button type="button" class="help__btn">
+                                            <svg>
+                                                <use href="img/icons/icons.svg#info"></use>
+                                            </svg>
+                                        </button>
+                                        <div class="help__body">
+                                            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                            <button type="button" class="help__close">
+                                                <svg>
+                                                    <use href="img/icons/icons.svg#close"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="section-form__switcher switcher">
+                                    <span>Enabled</span>
+                                    <span>Disabled</span>
+                                    <input type="checkbox">
+                                </button>
+                            </div>
+                        </div>
+                        <button type="submit" class="form__submit btn_green">
+                            Add monitoring
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <button type="button" class="up">
+            <svg>
+                <use href="img/icons/icons.svg#arrow"></use>
+            </svg>
+        </button>
+
+        <footer class="footer">
+    <div class="footer__container container">
+        <div class="footer__body">
+            <div class="footer__main">
+                <a href="#" class="footer__logo logo">
+                    <img src="img/logo.svg" alt="Logo">
+                    <span>RAPEF</span>
+                </a>
+                <div class="footer__links">
+                    <a href="#" class="footer__link">About</a>
+                    <a href="#" class="footer__link">Contact us</a>
+                </div>
+            </div>
+            <div class="footer__rights">© 2023, RAPEF.INFO</div>
+        </div>
+    </div>
+</footer>
+    </div>
+
+    <div class="popup" id="sign">
+    <div class="popup__wrapper">
+        <button type="button" class="popup__close">
+            <svg>
+                <use href="img/icons/icons.svg#close"></use>
+            </svg>
+        </button>
+        <div class="popup__content">
+            <div class="popup__image">
+                <picture><source srcset="img/popup/bg.webp" type="image/webp"><img src="img/popup/bg.png" alt="Background"></picture>
+            </div>
+            <form class="popup__form">
+                <h2 class="popup__title title-h3">Sign in to your account</h2>
+                <div class="popup__input input">
+                    <span class="input__label">Email</span>
+                    <input type="text" placeholder="Email">
+                </div>
+                <div class="popup__input pass">
+                    <span class="pass__label">Password</span>
+                    <a href="#" class="pass__forgot popup-link" data-modal="forgot">Forgot password?</a>
+                    <input type="password" placeholder="password">
+                    <button type="button" class="pass__switcher">
+                        <svg>
+                            <use href="img/icons/icons.svg#eye"></use>
+                        </svg>
+                        <svg>
+                            <use href="img/icons/icons.svg#eye2"></use>
+                        </svg>
+                    </button>
+                </div>
+                <button type="submit" class="popup__submit btn_green">Sign in</button>
+                <div class="popup__footer">
+                    Not registered?
+                    <a href="#" class="popup__link popup-link" data-modal="join">Join us</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="popup" id="join">
+    <div class="popup__wrapper">
+        <button type="button" class="popup__close">
+            <svg>
+                <use href="img/icons/icons.svg#close"></use>
+            </svg>
+        </button>
+        <div class="popup__content">
+            <div class="popup__image">
+                <picture><source srcset="img/popup/bg.webp" type="image/webp"><img src="img/popup/bg.png" alt="Background"></picture>
+            </div>
+            <form class="popup__form">
+                <h2 class="popup__title title-h3">Create your account</h2>
+                <div class="popup__input input">
+                    <span class="input__label">Full name</span>
+                    <input type="text" placeholder="Full name">
+                </div>
+                <div class="popup__input input">
+                    <span class="input__label">Email</span>
+                    <input type="text" placeholder="Email">
+                </div>
+                <div class="popup__input pass">
+                    <span class="pass__label">Password</span>
+                    <input type="password" placeholder="password">
+                    <button type="button" class="pass__switcher">
+                        <svg>
+                            <use href="img/icons/icons.svg#eye"></use>
+                        </svg>
+                        <svg>
+                            <use href="img/icons/icons.svg#eye2"></use>
+                        </svg>
+                    </button>
+                </div>
+                <button type="submit" class="popup__submit btn_green popup-link" data-modal="verify">Create
+                    account</button>
+                <div class="popup__footer">
+                    Already have an account?
+                    <a href="#" class="popup__link popup-link" data-modal="sign">Sign in</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="popup" id="forgot">
+    <div class="popup__wrapper">
+        <button type="button" class="popup__close">
+            <svg>
+                <use href="img/icons/icons.svg#close"></use>
+            </svg>
+        </button>
+        <div class="popup__content">
+            <div class="popup__image">
+                <picture><source srcset="img/popup/bg.webp" type="image/webp"><img src="img/popup/bg.png" alt="Background"></picture>
+            </div>
+            <form class="popup__form">
+                <h2 class="popup__title title-h3">Reset your password</h2>
+                <div class="popup__desc">
+                    Your password reset link will be sent to the registered email address.
+                </div>
+                <div class="popup__input input">
+                    <span class="input__label">Email</span>
+                    <input type="text" placeholder="Email">
+                </div>
+                <button type="submit" class="popup__submit btn_green">Reset password</button>
+                <div class="popup__footer">
+                    Remembered your password?
+                    <a href="#" class="popup__link popup-link" data-modal="sign">Sign in</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="popup" id="verify">
+    <div class="popup__wrapper">
+        <button type="button" class="popup__close">
+            <svg>
+                <use href="img/icons/icons.svg#close"></use>
+            </svg>
+        </button>
+        <div class="popup__content">
+            <div class="popup__image">
+                <picture><source srcset="img/popup/bg.webp" type="image/webp"><img src="img/popup/bg.png" alt="Background"></picture>
+            </div>
+            <form class="popup__form">
+                <h2 class="popup__title title-h3">Verify your email</h2>
+                <div class="popup__desc">
+                    <p>
+                        Kindly verify your email address by checking your inbox and completing the setup of your
+                        account.
+                    </p>
+                    <p>
+                        Confirmation should arrive promptly, but in case of any delay, reach out to our support team for
+                        assistance.
+                    </p>
+                </div>
+                <div class="popup__footer">
+                    Already have an account?
+                    <a href="#" class="popup__link popup-link" data-modal="sign">Sign in</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+    <script src="js/app.min.js?_v=20231116131046"></script>
+</body>
+
+</html>

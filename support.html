@@ -73,73 +73,39 @@
                         <nav class="sidebar__menu">
                             <a href="#" class="sidebar__link">Profile</a>
                             <a href="#" class="sidebar__link">Security</a>
-                            <a href="#" class="sidebar__link active">Notifications</a>
-                            <a href="#" class="sidebar__link">Support</a>
+                            <a href="#" class="sidebar__link">Notifications</a>
+                            <a href="#" class="sidebar__link active">Support</a>
                         </nav>
                     </aside>
                     <form action="#" class="page__form form">
-                        <h2 class="form__title">Notifications</h2>
-                        <div class="form__desc">
-                            You can specify channels to receive notifications
+                        <h2 class="form__title">Support</h2>
+                        <div class="form__desc">Need halp? Write to us</div>
+                        <div class="form__pre">Text of the appeal:</div>
+                        <div class="form__area">
+                            <textarea name="support-text" placeholder="Text of the appeal
+                            "></textarea>
                         </div>
-                        <div class="form__section section-form">
-                            <div class="section-form__options">
-                                <div class="section-form__desc">
-                                    Хотите использовать основную почту для получения уведомлений:
-                                </div>
-                                <button type="button" class="section-form__switcher switcher active">
-                                    <span>Enabled</span>
-                                    <span>Disabled</span>
-                                    <input type="checkbox">
-                                </button>
-                            </div>
-                            <div class="section-form__input">
-                                <svg class="fill">
-                                    <use href="img/icons/icons.svg#mail"></use>
-                                </svg>
-                                <input type="text" placeholder="Main mail" value="saruch123@gmail.com (по умолчанию)">
-                            </div>
-                        </div>
-                        <div class="form__section section-form">
-                            <div class="section-form__header">Дополнительная почта:</div>
-                            <div class="section-form__input">
-                                <svg class="fill">
-                                    <use href="img/icons/icons.svg#mail"></use>
-                                </svg>
-                                <input type="text" placeholder="Additional mail">
-                            </div>
-                            <div class="section-form__options">
-                                <div class="section-form__desc">
-                                    Использовать дополнительную почту для получения уведомлений:
-                                </div>
-                                <button type="button" class="section-form__switcher switcher">
-                                    <span>Enabled</span>
-                                    <span>Disabled</span>
-                                    <input type="checkbox">
-                                </button>
-                            </div>
-                        </div>
-                        <div class="form__section section-form">
-                            <div class="section-form__header">Telegram:</div>
-                            <div class="section-form__input">
+                        <div class="form__pre">Add attachment:</div>
+                        <div class="form__file file">
+                            <div class="file__body">
                                 <svg>
                                     <use href="img/icons/icons.svg#telegram"></use>
                                 </svg>
-                                <input type="text" placeholder="@account telegram">
+                                <div class="file__text">Choose file...</div>
+                                <div class="file__type">Add format: jpg, png, pdf max 5 mb</div>
                             </div>
-                            <div class="section-form__options">
-                                <div class="section-form__desc">
-                                    Использовать для получения уведомлений:
-                                </div>
-                                <button type="button" class="section-form__switcher switcher">
-                                    <span>Enabled</span>
-                                    <span>Disabled</span>
-                                    <input type="checkbox">
+                            <input type="file" name="support-file" accept=".jpg, .png, .pdf">
+                            <div class="file__preview">
+                                <button type="button" class="file__delete">
+                                    <svg>
+                                        <use href="img/icons/icons.svg#close"></use>
+                                    </svg>
                                 </button>
+                                <span></span>
                             </div>
                         </div>
                         <button type="submit" class="form__submit btn_green">
-                            Save changes
+                            Submit request
                         </button>
                     </form>
                 </div>
